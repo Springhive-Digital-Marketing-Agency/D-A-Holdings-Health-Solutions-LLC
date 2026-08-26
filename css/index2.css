@@ -1366,7 +1366,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .testimonial-slider-container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     align-items: center;
