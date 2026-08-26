@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Thick curvy lines mimicking a brain/cloud shape -->
+  <path d="M 100,180 
+           C 60,180 30,150 30,110
+           C 30,90 40,75 55,65
+           C 50,45 65,20 90,20
+           C 110,20 125,35 130,50
+           C 155,45 180,65 175,95
+           C 195,110 185,150 160,165
+           C 145,175 125,180 100,180 Z" 
+        fill="none" stroke="#2A9D8F" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  
+  <path d="M 100,20 V 180" fill="none" stroke="#2A9D8F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 60,40 Q 80,80 60,120" fill="none" stroke="#2A9D8F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 140,55 Q 120,95 140,135" fill="none" stroke="#2A9D8F" stroke-width="12" stroke-linecap="round"/>
+</svg>
