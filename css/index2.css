@@ -1366,7 +1366,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .testimonial-slider-container {
     position: relative;
-    max-width: 960px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -1376,10 +1376,6 @@ h1, h2, h3, h4, h5, h6 {
 .slider-track-wrap {
     overflow: hidden;
     width: 100%;
-    border-radius: 20px;
-    background-color: var(--clr-ivory);
-    border: 1px solid var(--clr-border);
-    box-shadow: var(--shadow-soft);
 }
 
 .slider-track {
@@ -1388,13 +1384,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonial-slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-    padding: 4rem 3.5rem;
-    text-align: center;
+    flex: 0 0 calc(100% / 3);
+    min-width: calc(100% / 3);
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.testi-card-inner {
+    background-color: var(--clr-ivory);
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-soft);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .testimonial-slide .stars {
@@ -1407,11 +1414,11 @@ h1, h2, h3, h4, h5, h6 {
 .testi-quote {
     font-family: var(--font-heading);
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.65;
     color: var(--clr-navy);
     margin-bottom: 2rem;
-    max-width: 800px;
+    flex-grow: 1;
 }
 
 .testi-author strong {
@@ -2062,6 +2069,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile (Max 768px) */
+@media (max-width: 992px) {
+    .testimonial-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --container-padding: 20px;

@@ -67,15 +67,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlides = slides.length;
     let autoSlideInterval = null;
 
+    // Calculate max slides based on screen width (desktop 3, mobile 1)
+    const getItemsPerView = () => window.innerWidth > 992 ? 3 : 1;
+
     const updateSlider = (index) => {
-        currentSlide = (index + totalSlides) % totalSlides;
+        const itemsPerView = getItemsPerView();
+        const maxIndex = totalSlides - itemsPerView;
+        
+        if (index < 0) {
+            currentSlide = maxIndex;
+        } else if (index > maxIndex) {
+            currentSlide = 0;
+        } else {
+            currentSlide = index;
+        }
+        
         if (track) {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            track.style.transform = `translateX(-${currentSlide * (100 / itemsPerView)}%)`;
         }
 
         dotBtns.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === currentSlide);
-            dot.setAttribute('aria-current', idx === currentSlide ? 'true' : 'false');
+            // Update dots to match the current slide group (simplified)
+            if(idx < dotBtns.length) {
+                const dotTarget = parseInt(dot.getAttribute('data-slide') || 0, 10);
+                dot.classList.toggle('active', dotTarget === currentSlide || (dotTarget === 0 && currentSlide > 2));
+                dot.setAttribute('aria-current', dotTarget === currentSlide ? 'true' : 'false');
+            }
         });
     };
 
