@@ -2212,3 +2212,17 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   UNIFORM 16PX POPPINS TEXT OVERRIDES
+   ========================================================================== */
+body, p, li, label, input, textarea, select, button, .btn,
+.hero-desc, .section-subtext, .section-eyebrow, .service-desc, .team-role, 
+.team-bio, .testi-author, .testi-author strong, .testi-author span, .faq-trigger span, 
+.faq-content p, .cta-desc, .contact-intro, .footer-desc, .copyright,
+.nav-links a, .footer-links a, .contact-detail-block p, .contact-detail-block a,
+.resource-cat, .resource-read, .resource-desc, .resource-link span,
+.care-badge-label {
+    font-size: 16px !important;
+}
+
