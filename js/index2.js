@@ -249,4 +249,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ==========================================================================
+       8. HERO IMAGE SLIDER ANIMATION
+       ========================================================================== */
+    const heroImg = document.querySelector('.hero-main-img');
+    if (heroImg) {
+        const heroImages = [
+            'images/hero_slide1.jpg',
+            'images/hero_slide2.jpg',
+            'images/hero_slide3.jpg'
+        ];
+        let currentHeroIdx = 0;
+
+        setInterval(() => {
+            currentHeroIdx = (currentHeroIdx + 1) % heroImages.length;
+            
+            // Remove animation class to reset it
+            heroImg.classList.remove('hero-animating');
+            
+            // Trigger reflow to restart animation
+            void heroImg.offsetWidth;
+            
+            // Change image source
+            heroImg.src = heroImages[currentHeroIdx];
+            
+            // Add animation class back
+            heroImg.classList.add('hero-animating');
+        }, 5000);
+    }
+
 });
