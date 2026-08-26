@@ -658,8 +658,8 @@ h1, h2, h3, h4, h5, h6 {
    TRUST BAR (4 MINIMALIST PILLARS)
    ========================================================================== */
 .trust-bar-section {
-    background-color: var(--clr-white);
-    border-bottom: 1px solid var(--clr-border);
+    background-color: var(--clr-navy);
+    border-bottom: none;
     padding: 2.8rem 0;
 }
 
@@ -674,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
     gap: 1.1rem;
     padding-right: 1.5rem;
-    border-right: 1px solid var(--clr-border);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .trust-item:last-child {
@@ -686,7 +686,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background-color: var(--clr-ivory);
+    background-color: rgba(255, 255, 255, 0.05);
     color: var(--clr-gold);
     display: flex;
     align-items: center;
@@ -696,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .trust-item:hover .trust-icon-box {
-    background-color: var(--clr-navy);
+    background-color: var(--clr-teal);
     color: var(--clr-white);
     transform: translateY(-2px);
 }
@@ -706,13 +706,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.88rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: var(--clr-navy);
+    color: var(--clr-white);
     margin-bottom: 0.35rem;
 }
 
 .trust-info p {
     font-size: 0.88rem;
-    color: var(--clr-text-muted);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
 }
 
