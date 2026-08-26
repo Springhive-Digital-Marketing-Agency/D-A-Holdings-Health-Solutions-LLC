@@ -37,8 +37,12 @@
     <!-- Main Header -->
     <header class="site-header" id="siteHeader">
         <div class="container header-container">
-            <a href="#home" class="brand-logo" aria-label="D & A Holdings">
-                <img src="images/logo.jpg" alt="D&A Holdings Logo" style="height: 60px; width: auto; object-fit: contain;">
+            <a href="#home" class="brand-logo" aria-label="D & A Holdings" style="flex-direction: row; align-items: center; gap: 12px;">
+                <img src="images/logo_icon.png" alt="D&A Holdings Logo Icon" style="height: 50px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
+                    <span class="brand-sub">HEALTH SOLUTIONS LLC</span>
+                </div>
             </a>
 
             <!-- Desktop Navigation -->
@@ -64,8 +68,12 @@
     <!-- Mobile Drawer Overlay -->
     <div class="mobile-drawer" id="mobileDrawer">
         <div class="drawer-header">
-            <a href="#home" class="brand-logo">
-                <img src="images/logo.jpg" alt="D&A Holdings Logo" style="height: 45px; width: auto; object-fit: contain;">
+            <a href="#home" class="brand-logo" style="flex-direction: row; align-items: center; gap: 10px;">
+                <img src="images/logo_icon.png" alt="D&A Holdings Logo Icon" style="height: 40px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="brand-name" style="font-size: 1.35rem; line-height: 1.1;">D &amp; A HOLDINGS</span>
+                    <span class="brand-sub" style="font-size: 0.55rem;">HEALTH SOLUTIONS LLC</span>
+                </div>
             </a>
             <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
         </div>
@@ -977,8 +985,14 @@
             <div class="footer-top-grid">
                 <!-- Brand Bio -->
                 <div class="footer-brand-col">
-                    <a href="#home" class="brand-logo footer-logo">
-                        <img src="images/logo.jpg" alt="D&A Holdings Logo" style="height: 65px; width: auto; object-fit: contain; margin-bottom: 15px;">
+                    <a href="#home" class="brand-logo footer-logo" style="flex-direction: row; align-items: center; gap: 14px; margin-bottom: 20px;">
+                        <div style="background-color: var(--clr-white); padding: 6px; border-radius: 10px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; flex-shrink: 0;">
+                            <img src="images/logo_icon.png" alt="D&A Holdings Logo Icon" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
+                            <span class="brand-sub">HEALTH SOLUTIONS LLC</span>
+                        </div>
                     </a>
                     <p class="footer-tagline">Compassionate. Holistic. Evidence-Based.</p>
                     <p class="footer-bio">
