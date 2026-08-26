@@ -620,19 +620,19 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes hero3DFade {
     0% { 
         opacity: 0; 
-        transform: perspective(1200px) rotateY(-15deg) rotateX(10deg) translateZ(-50px) scale(0.95);
-        filter: blur(5px);
+        transform: perspective(1000px) rotateY(-30deg) rotateX(15deg) translateZ(-150px) scale(0.85);
+        filter: blur(10px);
     }
     100% { 
         opacity: 1; 
-        transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateZ(0) scale(1);
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateZ(0) scale(1);
         filter: blur(0px);
     }
 }
 
 .hero-animating {
     transform-style: preserve-3d;
-    animation: hero3DFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: hero3DFade 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .hero-floating-card {
