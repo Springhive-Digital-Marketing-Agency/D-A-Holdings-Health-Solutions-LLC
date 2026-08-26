@@ -951,7 +951,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 560px;
     object-fit: cover;
-    object-position: 80% center;
+    object-position: right center;
 }
 
 .care-badge-overlay {
