@@ -1318,7 +1318,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-photo-wrap {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     width: 100%;
 }
