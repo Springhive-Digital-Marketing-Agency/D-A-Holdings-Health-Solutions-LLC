@@ -933,10 +933,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-card);
 }
 
-.principle-num {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-weight: 600;
+.principle-icon {
     color: var(--clr-gold);
     background-color: var(--clr-ivory);
     width: 44px;
@@ -946,6 +943,12 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.principle-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.8;
 }
 
 .principle-content h4 {
