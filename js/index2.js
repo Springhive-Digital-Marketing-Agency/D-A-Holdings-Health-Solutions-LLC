@@ -1,86 +1,252 @@
-// js/index2.js
+/**
+ * INDEX3 - HAVENCARE SENIOR HEALTHCARE
+ * Interactive JavaScript Engine
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* ==========================================================================
+       1. STICKY HEADER & SCROLL BEHAVIOR
+       ========================================================================== */
+    const siteHeader = document.getElementById('siteHeader');
     
-    // 1. Header Scroll State
-    const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+    const handleScroll = () => {
+        if (window.scrollY > 30) {
+            siteHeader.classList.add('scrolled');
         } else {
-            header.classList.remove('scrolled');
+            siteHeader.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    /* ==========================================================================
+       2. MOBILE DRAWER NAVIGATION
+       ========================================================================== */
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerClose = document.getElementById('drawerClose');
+    const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-footer a');
+
+    const openDrawer = () => {
+        mobileDrawer.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeDrawer = () => {
+        mobileDrawer.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
+
+    if (menuToggle) menuToggle.addEventListener('click', openDrawer);
+    if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+            closeDrawer();
         }
     });
 
-    // 2. Intersection Observer for Reveal Animations
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
-    
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
+    /* ==========================================================================
+       3. TESTIMONIALS CAROUSEL / SLIDER
+       ========================================================================== */
+    const track = document.getElementById('testimonialTrack');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dotBtns = document.querySelectorAll('.dot-btn');
+    const slides = document.querySelectorAll('.testimonial-slide');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let autoSlideInterval = null;
+
+    const updateSlider = (index) => {
+        currentSlide = (index + totalSlides) % totalSlides;
+        if (track) {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        dotBtns.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentSlide);
+            dot.setAttribute('aria-current', idx === currentSlide ? 'true' : 'false');
         });
-    }, revealOptions);
-    
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
+    };
+
+    const nextSlide = () => updateSlider(currentSlide + 1);
+    const prevSlide = () => updateSlider(currentSlide - 1);
+
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
     });
 
-    // 3. Interactive Vertical Service Navigator
-    const navItems = document.querySelectorAll('.nav-item');
-    const bgImages = document.querySelectorAll('.service-bg-img');
-    
-    navItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            // Remove active class from all items
-            navItems.forEach(nav => nav.classList.remove('active'));
-            // Add active class to hovered item
-            this.classList.add('active');
-            
-            // Get the target service ID
-            const targetId = this.getAttribute('data-service');
-            
-            // Swap background image
-            bgImages.forEach(img => {
-                if (img.getAttribute('data-target') === targetId) {
-                    img.classList.add('active');
-                } else {
-                    img.classList.remove('active');
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    dotBtns.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+            const slideIdx = parseInt(e.target.getAttribute('data-slide'), 10);
+            updateSlider(slideIdx);
+            resetAutoSlide();
+        });
+    });
+
+    // Auto-slide loop
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    };
+
+    const stopAutoSlide = () => {
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+    };
+
+    const resetAutoSlide = () => {
+        stopAutoSlide();
+        startAutoSlide();
+    };
+
+    const sliderContainer = document.querySelector('.testimonial-slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+        // Touch Swipe
+        let startX = 0;
+        let endX = 0;
+
+        sliderContainer.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].screenX;
+            if (startX - endX > 45) {
+                nextSlide();
+                resetAutoSlide();
+            } else if (endX - startX > 45) {
+                prevSlide();
+                resetAutoSlide();
+            }
+        }, { passive: true });
+    }
+
+    startAutoSlide();
+
+    /* ==========================================================================
+       4. FAQ ACCORDION
+       ========================================================================== */
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        const icon = item.querySelector('.faq-icon');
+
+        trigger.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all others for clean accordion
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                const otherTrigger = otherItem.querySelector('.faq-trigger');
+                const otherIcon = otherItem.querySelector('.faq-icon');
+                if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+                if (otherIcon) otherIcon.textContent = '+';
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
+                if (icon) icon.textContent = '−';
+            }
+        });
+    });
+
+    /* ==========================================================================
+       5. SCROLL REVEAL OBSERVER
+       ========================================================================== */
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
                 }
             });
+        }, {
+            root: null,
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback
+        revealElements.forEach(el => el.classList.add('active'));
+    }
+
+    /* ==========================================================================
+       6. SMOOTH ANCHOR LINK SCROLLING
+       ========================================================================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || !targetId) return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                const headerOffset = 90;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-    // 4. Mobile Menu Toggle (Basic Setup)
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navList = document.querySelector('.nav-list');
-    
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            // Simplified mobile menu logic for the prototype
-            if (navList.style.display === 'flex') {
-                navList.style.display = 'none';
-            } else {
-                navList.style.display = 'flex';
-                navList.style.flexDirection = 'column';
-                navList.style.position = 'absolute';
-                navList.style.top = '100%';
-                navList.style.left = '0';
-                navList.style.width = '100%';
-                navList.style.backgroundColor = '#FFFFFF';
-                navList.style.padding = '2rem 5%';
-                navList.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-            }
+    /* ==========================================================================
+       7. CONTACT FORM INTERACTIVITY & VALIDATION
+       ========================================================================== */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.textContent = 'Sending Inquiry...';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.textContent = '✓ Inquiry Sent Successfully!';
+                submitBtn.style.backgroundColor = '#8F9F88';
+                submitBtn.style.borderColor = '#8F9F88';
+                submitBtn.style.opacity = '1';
+
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.style.borderColor = '';
+                    submitBtn.disabled = false;
+                }, 4000);
+            }, 1200);
         });
     }
+
 });
