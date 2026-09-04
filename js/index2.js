@@ -295,4 +295,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
+    /* ==========================================================================
+       9. TOUCH DROPDOWN NAVIGATION ENHANCEMENT
+       ========================================================================== */
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    navDropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
 });
+
