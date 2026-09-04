@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealth Services | D & A Holdings Health Solutions LLC</title>
+    <meta name="description" content="Secure, confidential remote psychiatric appointments and medication management follow-ups from the comfort of home at D & A Holdings Health Solutions LLC.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/index2.css">
+</head>
+<body>
+
+    <!-- Emergency & Crisis Alert Bar -->
+    <aside class="crisis-top-bar" aria-label="Crisis and Emergency Information">
+        <div class="crisis-top-container">
+            <span class="crisis-pill">CRISIS NOTICE</span>
+            <span>If experiencing an immediate emergency, call <a href="tel:911"><strong>911</strong></a>. For 24/7 mental health crisis support, call or text <a href="tel:988"><strong>988</strong></a> (Suicide &amp; Crisis Lifeline).</span>
+        </div>
+    </aside>
+
+    <!-- Top Utility Bar -->
+    <div class="utility-bar" id="utilityBar">
+        <div class="container utility-container">
+            <div class="utility-left">
+                <span class="utility-dot"></span>
+                <span>Serving Children &amp; Adolescents (6–17) and Adults (18–67) • Waldorf, MD</span>
+            </div>
+            <div class="utility-right">
+                <a href="tel:2409176203" class="utility-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>240-917-6203</span>
+                </a>
+                <span class="utility-divider">|</span>
+                <span class="utility-link">Mon–Fri: 9:00 AM – 7:00 PM</span>
+                <span class="utility-divider">|</span>
+                <a href="new-patients.html" class="utility-link">New Patients</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <a href="index2.html" class="brand-logo" style="flex-direction: row; align-items: center; gap: 12px;">
+                <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="height: 50px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
+                    <span class="brand-sub">HEALTH SOLUTIONS LLC</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="index2.html" class="nav-link">Home</a>
+                
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle">
+                        About Us
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-item">About Our Practice</a>
+                        <a href="why-choose-us.html" class="dropdown-item">Why Choose Us</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle active">
+                        Services
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="services.html" class="dropdown-item">All Services Overview</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="child-adolescent.html" class="dropdown-item">Child &amp; Adolescent Care (6–17)</a>
+                        <a href="adult-mental-health.html" class="dropdown-item">Adult Mental Health (18–67)</a>
+                        <a href="telehealth.html" class="dropdown-item active">Telehealth Services</a>
+                    </div>
+                </div>
+
+                <a href="conditions.html" class="nav-link">Conditions</a>
+                <a href="new-patients.html" class="nav-link">New Patients</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="contact.html#appointment-form" class="btn btn-consultation">Book Appointment</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <a href="index2.html" class="brand-logo" style="flex-direction: row; align-items: center; gap: 10px;">
+                <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="height: 40px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span class="brand-name" style="font-size: 1.35rem; line-height: 1.1;">D &amp; A HOLDINGS</span>
+                    <span class="brand-sub" style="font-size: 0.55rem;">HEALTH SOLUTIONS LLC</span>
+                </div>
+            </a>
+            <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="index2.html" class="drawer-link">Home</a>
+            <a href="about.html" class="drawer-link">About Us</a>
+            <a href="why-choose-us.html" class="drawer-link">Why Choose Us</a>
+            <a href="services.html" class="drawer-link">Our Services</a>
+            <a href="child-adolescent.html" class="drawer-link">Child &amp; Adolescent Mental Health</a>
+            <a href="adult-mental-health.html" class="drawer-link">Adult Mental Health</a>
+            <a href="conditions.html" class="drawer-link">Conditions We Treat</a>
+            <a href="new-patients.html" class="drawer-link">New Patients Guide</a>
+            <a href="telehealth.html" class="drawer-link active">Telehealth Services</a>
+            <a href="faq.html" class="drawer-link">Frequently Asked Questions</a>
+            <a href="contact.html" class="drawer-link">Contact Us</a>
+        </nav>
+        <div class="drawer-footer">
+            <a href="contact.html#appointment-form" class="btn btn-consultation btn-full">Book Appointment</a>
+            <a href="tel:2409176203" class="drawer-phone">📞 240-917-6203</a>
+        </div>
+    </div>
+
+    <!-- Panoramic Banner Hero with Semi-Transparent Blue Overlay -->
+    <section class="banner-hero-section">
+        <img src="images/hero_telehealth_unique.jpg" alt="Telehealth Services" class="banner-hero-img">
+        <div class="banner-sub-bar">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="index2.html">Home</a>
+                    <span class="sep">/</span>
+                    <a href="services.html">Services</a>
+                    <span class="sep">/</span>
+                    <span>Telehealth</span>
+                </div>
+                <h1 class="banner-sub-title">Telehealth Services</h1>
+                <p>
+                    When clinically appropriate and permitted by applicable regulations, telehealth appointments provide clients with convenient, confidential access to mental health services from a private location.
+                </p>
+                <div class="inner-hero-badges">
+                    <span class="inner-badge">Remote Consultations</span>
+                    <span class="inner-badge">HIPAA Compliant</span>
+                    <span class="inner-badge">Medication Follow-Ups</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+
+        <!-- Overview -->
+        <section class="section-padding bg-white">
+            <div class="container">
+                <div class="featured-care-grid" style="align-items: center;">
+                    <div class="featured-care-text reveal">
+                        <span class="section-eyebrow text-gold">CONVENIENT CARE ACCESS</span>
+                        <h2 class="section-heading">Virtual Psychiatric Care from Home</h2>
+                        <p class="featured-lead-desc">
+                            D &amp; A Holdings Health Solutions LLC may offer telehealth services when clinically appropriate and permitted by applicable laws and regulations.
+                        </p>
+                        <p class="secondary-text" style="margin-bottom: 1.2rem;">
+                            Telehealth lets eligible clients attend certain psychiatric appointments remotely from a private location. Telehealth may be available for psychiatric evaluations, medication-management follow-ups, and other appropriate mental health consultations.
+                        </p>
+                        <p class="secondary-text">
+                            We determine the appropriateness of telehealth based on individual clinical circumstances, treatment safety considerations, and applicable regulations.
+                        </p>
+                    </div>
+
+                    <div class="featured-care-visual reveal delay-1">
+                        <div class="care-visual-backdrop"></div>
+                        <div class="care-image-frame">
+                            <img src="images/condition_anxiety.jpg" alt="Telehealth virtual consultation" class="care-main-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements for Telehealth -->
+        <section class="section-padding bg-ivory">
+            <div class="container">
+                <div class="section-header-center reveal">
+                    <span class="section-eyebrow text-sage">PATIENT REQUIREMENTS</span>
+                    <h2 class="section-heading">What You Need for a Successful Visit</h2>
+                    <p class="section-subtext">
+                        Clients participating in telehealth should ensure the following environment and equipment are ready prior to their appointment:
+                    </p>
+                </div>
+
+                <div class="principles-grid reveal" style="margin-top: 2.5rem;">
+                    
+                    <!-- Requirement 1 -->
+                    <div class="principle-item-card">
+                        <div class="principle-num">1</div>
+                        <div>
+                            <h4>Reliable Internet Connection</h4>
+                            <p>A stable, high-speed broadband or cellular connection capable of seamless two-way video and audio streaming without interruptions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Requirement 2 -->
+                    <div class="principle-item-card">
+                        <div class="principle-num">2</div>
+                        <div>
+                            <h4>Appropriate Electronic Device</h4>
+                            <p>A desktop computer, laptop, tablet, or smartphone equipped with a functioning camera, microphone, and speakers or headphones.</p>
+                        </div>
+                    </div>
+
+                    <!-- Requirement 3 -->
+                    <div class="principle-item-card">
+                        <div class="principle-num">3</div>
+                        <div>
+                            <h4>Private &amp; Confidential Environment</h4>
+                            <p>A quiet, private room where you feel safe and comfortable communicating openly and candidly with your psychiatric provider.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #ffffff; border: 1px solid var(--clr-border); border-radius: 14px; padding: 2.5rem; margin-top: 3.5rem; text-align: center;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--clr-navy); margin-bottom: 0.8rem;">
+                        Determining Clinical Suitability
+                    </h3>
+                    <p style="max-width: 750px; margin: 0 auto 1.5rem; color: var(--clr-text-muted); line-height: 1.7;">
+                        While telehealth is a valuable and flexible option for many patients, certain clinical presentations, diagnostic needs, or emergency concerns may require in-person care. Our clinical team evaluates each situation carefully.
+                    </p>
+                    <a href="contact.html#appointment-form" class="btn btn-primary">Inquire About Telehealth Availability</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency & Crisis Disclaimer -->
+        <section class="section-padding bg-white" style="padding-top: 2rem; padding-bottom: 4rem;">
+            <div class="container">
+                <div class="emergency-disclaimer-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        Website Emergency &amp; Crisis Disclaimer
+                    </h3>
+                    <p><strong>D &amp; A Holdings Health Solutions LLC is not an emergency or crisis-response service.</strong></p>
+                    <p>Telehealth is not appropriate for acute medical or psychiatric crises. If you or someone else is experiencing an immediate emergency, call <span class="emergency-hotline-highlight">911</span> or go to the nearest emergency department.</p>
+                    <p>For mental health, suicide, or substance-use crisis support in the United States, call or text <span class="emergency-hotline-highlight">988</span> to reach the 988 Suicide &amp; Crisis Lifeline.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-brand-col">
+                    <a href="index2.html" class="brand-logo footer-logo" style="flex-direction: row; align-items: center; gap: 14px; margin-bottom: 20px;">
+                        <div style="background-color: var(--clr-white); padding: 6px; border-radius: 10px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; flex-shrink: 0;">
+                            <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
+                            <span class="brand-sub">HEALTH SOLUTIONS LLC</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Supporting Minds. Strengthening Families. Improving Lives.</p>
+                    <p class="footer-bio">
+                        Providing compassionate, individualized, and evidence-informed behavioral and mental health services for children, adolescents, and adults.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.92rem; color: var(--clr-taupe);">
+                        📍 11315 Pembrooke Square, Suite 110, Waldorf, MD 20603<br>
+                        📞 240-917-6203 | Mon–Fri: 9:00 AM – 7:00 PM
+                    </p>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>PAGES</h4>
+                    <ul>
+                        <li><a href="index2.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a href="conditions.html">Conditions We Treat</a></li>
+                        <li><a href="new-patients.html">New Patients</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="services.html#evaluations">Psychiatric Evaluations</a></li>
+                        <li><a href="services.html#medication-management">Medication Management</a></li>
+                        <li><a href="child-adolescent.html">Child &amp; Adolescent Care</a></li>
+                        <li><a href="adult-mental-health.html">Adult Mental Health</a></li>
+                        <li><a href="telehealth.html">Telehealth Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col" style="grid-column: span 2;">
+                    <h4>CRISIS SUPPORT</h4>
+                    <p style="font-size: 0.9rem; color: var(--clr-taupe); line-height: 1.6; margin-bottom: 0.8rem;">
+                        If in immediate danger or psychiatric emergency:
+                    </p>
+                    <p style="font-size: 0.95rem; color: #ffffff;">
+                        🚨 Call <strong>911</strong> for emergencies<br>
+                        🤝 Call or text <strong>988</strong> for Suicide &amp; Crisis Lifeline
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 D &amp; A Holdings Health Solutions LLC. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/index2.js"></script>
+</body>
+</html>
