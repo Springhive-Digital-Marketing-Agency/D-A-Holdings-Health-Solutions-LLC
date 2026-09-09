@@ -1981,7 +1981,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.6rem;
 }
 
-.patient-intake-section {
+.patient-intake-section,
+.appointment-form-section {
     background-color: var(--clr-white);
 }
 
@@ -1992,7 +1993,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
 }
 
-.intake-form-container {
+.intake-form-container,
+.appointment-form-container {
     width: 100%;
     background: #ffffff;
     border: 1px solid var(--clr-border);
@@ -2003,7 +2005,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-smooth);
 }
 
-.intake-form-container:hover {
+.intake-form-container:hover,
+.appointment-form-container:hover {
     box-shadow: 0 16px 40px rgba(10, 37, 64, 0.08);
 }
 
@@ -2481,7 +2484,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.88rem !important;
         margin-bottom: 1.2rem !important;
     }
-    .intake-form-container {
+    .intake-form-container,
+    .appointment-form-container {
         padding: 1.6rem 1.25rem;
         border-radius: 14px;
         box-shadow: 0 4px 16px rgba(10, 37, 64, 0.05);
@@ -2524,7 +2528,8 @@ h1, h2, h3, h4, h5, h6 {
     .contact-form-col h3 {
         font-size: 1.35rem !important;
     }
-    .intake-form-container {
+    .intake-form-container,
+    .appointment-form-container {
         padding: 1.25rem 0.9rem;
         border-radius: 12px;
     }
