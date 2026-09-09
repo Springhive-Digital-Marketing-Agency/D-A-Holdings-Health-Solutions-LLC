@@ -1818,8 +1818,14 @@ h1, h2, h3, h4, h5, h6 {
 .contact-details-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.1rem;
+    gap: 1.25rem;
     margin-bottom: 2rem;
+}
+
+.contact-details-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .contact-detail-block {
@@ -1831,6 +1837,17 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 12px;
     padding: 1.2rem 1rem;
     transition: var(--transition-smooth);
+    margin-bottom: 0;
+}
+
+/* Fallback: ensure stacked sibling blocks always have comfortable spacing */
+.contact-detail-block + .contact-detail-block {
+    margin-top: 1.25rem;
+}
+
+.contact-details-list .contact-detail-block + .contact-detail-block,
+.contact-details-vertical .contact-detail-block + .contact-detail-block {
+    margin-top: 0;
 }
 
 .contact-detail-block:hover {
@@ -1930,6 +1947,89 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   FORM CARDS & RESPONSIVE CONTAINERS (LAPTOP, TABLET, MOBILE)
+   ========================================================================== */
+.contact-form-col {
+    background: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: 18px;
+    padding: 2.6rem 2.4rem;
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+    box-sizing: border-box;
+    transition: var(--transition-smooth);
+}
+
+.contact-form-col:hover {
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.08);
+}
+
+.contact-form-col .form-title {
+    font-family: var(--font-heading);
+    color: var(--clr-navy);
+    font-size: 1.85rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0.45rem;
+}
+
+.contact-form-col .form-subtitle {
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+}
+
+.patient-intake-section {
+    background-color: var(--clr-white);
+}
+
+.intake-practice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.intake-form-container {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: 18px;
+    padding: 2.8rem 2.5rem;
+    box-shadow: var(--shadow-soft);
+    box-sizing: border-box;
+    transition: var(--transition-smooth);
+}
+
+.intake-form-container:hover {
+    box-shadow: 0 16px 40px rgba(10, 37, 64, 0.08);
+}
+
+/* Formaloo Root Container Global Responsive Consistency */
+.formaloo--root-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 480px;
+    box-sizing: border-box !important;
+    overflow-x: hidden;
+    margin: 0 auto !important;
+}
+
+.formaloo--root-container iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+}
+
+@media (max-width: 992px) {
+    .intake-practice-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
    FOOTER (DEEP NAVY)
    ========================================================================== */
 .site-footer {
@@ -1994,19 +2094,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bottom-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: 2.5rem;
     font-size: 0.84rem;
 }
 
-.footer-legal-links {
-    display: flex;
-    gap: 2rem;
+.footer-bottom-bar p {
+    text-align: center;
+    margin: 0;
+    width: 100%;
 }
 
-.footer-legal-links a:hover {
-    color: var(--clr-gold-light);
+.footer-legal-links {
+    display: none;
 }
 
 /* ==========================================================================
@@ -2174,7 +2276,19 @@ h1, h2, h3, h4, h5, h6 {
     }
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 3.5rem;
+        gap: 2.8rem;
+    }
+    .contact-details-list {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 1.25rem;
+    }
+    .contact-form-col {
+        padding: 2.2rem 2rem;
+        border-radius: 16px;
+    }
+    .intake-form-container {
+        padding: 2.2rem 2rem;
+        border-radius: 16px;
     }
     .footer-top-grid {
         grid-template-columns: 1fr;
@@ -2350,6 +2464,35 @@ h1, h2, h3, h4, h5, h6 {
     }
     .contact-details-list {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .contact-form-col {
+        padding: 1.6rem 1.25rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(10, 37, 64, 0.05);
+    }
+    .contact-form-col .form-title,
+    .contact-form-col h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.35rem !important;
+    }
+    .contact-form-col .form-subtitle,
+    .contact-form-col p {
+        font-size: 0.88rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .intake-form-container {
+        padding: 1.6rem 1.25rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(10, 37, 64, 0.05);
+    }
+    .formaloo--root-container {
+        min-height: 440px;
+    }
+    .formaloo--root-container input,
+    .formaloo--root-container select,
+    .formaloo--root-container textarea {
+        font-size: 16px !important;
     }
     .cta-banner-card {
         padding: 3.5rem 1.8rem;
@@ -2368,6 +2511,22 @@ h1, h2, h3, h4, h5, h6 {
     }
     .footer-legal-links {
         justify-content: center;
+    }
+}
+
+/* Mobile Small (Max 480px) */
+@media (max-width: 480px) {
+    .contact-form-col {
+        padding: 1.25rem 0.95rem;
+        border-radius: 12px;
+    }
+    .contact-form-col .form-title,
+    .contact-form-col h3 {
+        font-size: 1.35rem !important;
+    }
+    .intake-form-container {
+        padding: 1.25rem 0.9rem;
+        border-radius: 12px;
     }
 }
 
@@ -3033,3 +3192,69 @@ button,
 
 
 
+
+
+/* ==========================================================================
+   Clickable Intake Forms CTA Card
+   ========================================================================== */
+.intake-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.35rem 2rem;
+    text-decoration: none !important;
+    color: var(--clr-navy, #0d1b2a) !important;
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.intake-cta-card:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: var(--clr-navy, #0d1b2a) !important;
+    box-shadow: 0 4px 14px rgba(13, 27, 42, 0.08);
+    transform: translateY(-2px);
+}
+
+.intake-cta-card:active {
+    transform: translateY(0);
+}
+
+.intake-cta-card:focus-visible {
+    outline: 2px solid var(--clr-navy, #0d1b2a);
+    outline-offset: 3px;
+}
+
+.intake-cta-card .intake-cta-icon {
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.intake-cta-card .intake-cta-text {
+    font-style: italic;
+    color: var(--clr-navy, #0d1b2a);
+}
+
+@media (max-width: 640px) {
+    .intake-cta-card {
+        padding: 1.1rem 1.25rem;
+        font-size: 0.95rem;
+        gap: 8px;
+    }
+}
