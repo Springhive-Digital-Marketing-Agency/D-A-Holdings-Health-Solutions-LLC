@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                submitBtn.textContent = '✓ Inquiry Sent Successfully!';
+                submitBtn.textContent = '\u2713 Inquiry Sent Successfully!';
                 submitBtn.style.backgroundColor = '#8F9F88';
                 submitBtn.style.borderColor = '#8F9F88';
                 submitBtn.style.opacity = '1';

@@ -3037,7 +3037,7 @@ body, p, li, label, input, textarea, select, button, .btn,
 }
 
 .condition-focus-list li::before {
-    content: "•";
+    content: "\2022";
     color: var(--clr-gold);
     font-weight: bold;
 }
