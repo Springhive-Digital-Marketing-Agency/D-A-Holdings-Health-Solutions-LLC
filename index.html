@@ -38,7 +38,13 @@
                     <span>240-917-6203</span>
                 </a>
                 <span class="utility-divider">|</span>
-                <span class="utility-link">Mon-Fri: 9am-7pm | Sat: 9am-2pm | Sun: Closed</span>
+                <a href="mailto:info@dahhealthsolutions.com" class="utility-link" aria-label="Email D & A Holdings Health Solutions">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>info@dahhealthsolutions.com</span>
+                </a>
             </div>
         </div>
     </div>
@@ -47,7 +53,7 @@
     <header class="site-header" id="siteHeader">
         <div class="container header-container">
             <a href="index2.html" class="brand-logo" aria-label="D &amp; A Holdings Health Solutions LLC" style="flex-direction: row; align-items: center; gap: 12px;">
-                <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="height: 50px; width: auto; object-fit: contain;">
+                <img src="images/brand_icon.png" alt="D&amp;A Holdings Logo Icon" style="height: 50px; width: auto; object-fit: contain;">
                 <div style="display: flex; flex-direction: column; justify-content: center;">
                     <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
                     <span class="brand-sub">HEALTH SOLUTIONS LLC</span>
@@ -79,6 +85,7 @@
                     <div class="dropdown-menu">
                         <a href="services.html" class="dropdown-item">All Services Overview</a>
                         <div class="dropdown-divider"></div>
+                        <a href="substance-abuse.html" class="dropdown-item">Substance Abuse Services</a>
                         <a href="child-adolescent.html" class="dropdown-item">Child &amp; Adolescent Care (6â€“17)</a>
                         <a href="adult-mental-health.html" class="dropdown-item">Adult Mental Health (18â€“67)</a>
                         <a href="telehealth.html" class="dropdown-item">Telehealth Services</a>
@@ -106,12 +113,8 @@
     <!-- Mobile Drawer Overlay -->
     <div class="mobile-drawer" id="mobileDrawer">
         <div class="drawer-header">
-            <a href="index2.html" class="brand-logo" style="flex-direction: row; align-items: center; gap: 10px;">
-                <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="height: 40px; width: auto; object-fit: contain;">
-                <div style="display: flex; flex-direction: column; justify-content: center;">
-                    <span class="brand-name" style="font-size: 1.35rem; line-height: 1.1;">D &amp; A HOLDINGS</span>
-                    <span class="brand-sub" style="font-size: 0.55rem;">HEALTH SOLUTIONS LLC</span>
-                </div>
+            <a href="index2.html" class="brand-logo" aria-label="D &amp; A Holdings Health Solutions LLC">
+                <img src="images/brand_logo.png" alt="D &amp; A Holdings Health Solutions LLC" style="height: 42px; width: auto; object-fit: contain; display: block;">
             </a>
             <button class="drawer-close" id="drawerClose" aria-label="Close Menu">&times;</button>
         </div>
@@ -120,6 +123,7 @@
             <a href="about.html" class="drawer-link">About Us</a>
             <a href="why-choose-us.html" class="drawer-link">Why Choose Us</a>
             <a href="services.html" class="drawer-link">Our Services</a>
+            <a href="substance-abuse.html" class="drawer-link">Substance Abuse Services</a>
             <a href="child-adolescent.html" class="drawer-link">Child &amp; Adolescent Mental Health</a>
             <a href="adult-mental-health.html" class="drawer-link">Adult Mental Health</a>
             <a href="conditions.html" class="drawer-link">Conditions We Treat</a>
@@ -709,34 +713,8 @@
                             Contact our office today to begin establishing care. Our team will provide information regarding scheduling, required forms, insurance or payment information, and what to expect during your first appointment.
                         </p>
 
-                        <div class="contact-details-list">
-                            <div class="contact-detail-block">
-                                <div class="detail-icon">ðŸ“ž</div>
-                                <div>
-                                    <h4>PHONE</h4>
-                                    <a href="tel:2409176203">240-917-6203</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-detail-block">
-                                <div class="detail-icon">ðŸ“</div>
-                                <div>
-                                    <h4>OFFICE ADDRESS</h4>
-                                    <p>11315 Pembrooke Square, Suite 110<br>Waldorf, MD 20603</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-detail-block">
-                                <div class="detail-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="var(--clr-navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-                                <div>
-                                    <h4>BUSINESS HOURS</h4>
-                                    <p>Monday &ndash; Friday: 9:00 AM &ndash; 7:00 PM<br>Saturday: 9:00 AM &ndash; 2:00 PM<br>Sunday: Closed</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Emergency & Crisis Disclaimer Box -->
-                        <div class="emergency-disclaimer-card" style="margin-top: 2rem;">
+                        <div class="emergency-disclaimer-card">
                             <h3>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                                 Emergency &amp; Crisis Disclaimer
@@ -748,9 +726,9 @@
                         </div>
                     </div>
 
-                    <!-- Right: Appointment Request Form -->
+                    <!-- Right: Contact Message Form -->
                     <div class="contact-form-col reveal delay-1" id="appointment-form">
-                        <h3 class="form-title">Request an Appointment</h3>
+                        <h3 class="form-title">Send Us a Message</h3>
                         <p class="form-subtitle">Fill out this form and our administrative staff will contact you during office hours.</p>
                             <div class="formaloo--root-container"
      data-form-slug="T4hhE4l0"
@@ -778,7 +756,7 @@
                 <div class="footer-brand-col">
                     <a href="index2.html" class="brand-logo footer-logo" style="flex-direction: row; align-items: center; gap: 14px; margin-bottom: 20px;">
                         <div style="background-color: var(--clr-white); padding: 6px; border-radius: 10px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; flex-shrink: 0;">
-                            <img src="images/logo_icon.png" alt="D&amp;A Holdings Logo Icon" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            <img src="images/brand_icon.png" alt="D&amp;A Holdings Logo Icon" style="max-width: 100%; max-height: 100%; object-fit: contain;">
                         </div>
                         <div style="display: flex; flex-direction: column; justify-content: center;">
                             <span class="brand-name" style="line-height: 1.1;">D &amp; A HOLDINGS</span>
@@ -789,9 +767,16 @@
                     <p class="footer-bio">
                         Providing compassionate, individualized, and evidence-informed behavioral and mental health services for children, adolescents, and adults.
                     </p>
-                    <p style="margin-top: 1rem; font-size: 0.92rem; color: var(--clr-taupe);">
-                        ðŸ“ 11315 Pembrooke Square, Suite 110, Waldorf, MD 20603<br>
-                        ðŸ“ž 240-917-6203
+                                        <p style="margin-top: 1rem; font-size: 0.92rem; color: var(--clr-taupe); line-height: 1.8;">
+                        <span style="display: block; margin-bottom: 6px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 11315 Pembrooke Square, Suite 110, Waldorf, MD 20603
+                        </span>
+                        <span style="display: block; margin-bottom: 6px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:2409176203" style="color: inherit; text-decoration: none;">240-917-6203</a>
+                        </span>
+                        <span style="display: block;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <a href="mailto:info@dahhealthsolutions.com" style="color: inherit; text-decoration: none;">info@dahhealthsolutions.com</a>
+                        </span>
                     </p>
                 </div>
 
@@ -816,6 +801,7 @@
                     <h4>SERVICES</h4>
                     <ul>
                         <li><a href="services.html">All Services</a></li>
+                        <li><a href="substance-abuse.html">Substance Abuse Services</a></li>
                         <li><a href="services.html#evaluations">Psychiatric Evaluations</a></li>
                         <li><a href="services.html#medication-management">Medication Management</a></li>
                         <li><a href="child-adolescent.html">Child &amp; Adolescent Care</a></li>

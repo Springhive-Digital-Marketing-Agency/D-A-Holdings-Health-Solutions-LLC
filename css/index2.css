@@ -3263,3 +3263,129 @@ button,
         gap: 8px;
     }
 }
+
+/* ==========================================================================
+   SUBSTANCE ABUSE SERVICES SECTION
+   ========================================================================== */
+.substance-abuse-section {
+    position: relative;
+}
+
+.substance-feature-split {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3.5rem;
+    align-items: stretch;
+    margin-bottom: 3.5rem;
+    background: var(--clr-ivory-light);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-soft);
+}
+
+.substance-feature-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.substance-feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.substance-feature-split:hover .substance-feature-img img {
+    transform: scale(1.03);
+}
+
+.substance-feature-content {
+    padding: 3.5rem 3.5rem 3.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.substance-highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.substance-highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.substance-highlight-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(30, 58, 138, 0.1);
+    color: var(--clr-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.substance-highlight-text {
+    font-size: 0.92rem;
+    color: var(--clr-text-dark);
+    margin: 0;
+    line-height: 1.45;
+}
+
+.substance-highlight-text strong {
+    color: var(--clr-navy);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.substance-crisis-banner {
+    background: linear-gradient(135deg, var(--clr-navy) 0%, var(--clr-navy-dark) 100%);
+    border-radius: 16px;
+    padding: 2.2rem 2.5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(13, 27, 42, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 991px) {
+    .substance-feature-split {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .substance-feature-img {
+        min-height: 300px;
+        max-height: 380px;
+    }
+    .substance-feature-content {
+        padding: 2.5rem 2rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .substance-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .substance-feature-content {
+        padding: 2rem 1.4rem !important;
+    }
+    .substance-crisis-banner {
+        padding: 1.8rem 1.4rem;
+    }
+}
