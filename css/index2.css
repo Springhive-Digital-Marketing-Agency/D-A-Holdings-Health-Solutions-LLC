@@ -2108,6 +2108,20 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 0;
     width: 100%;
+    line-height: 1.8;
+}
+
+.springhive-link {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.springhive-link:hover {
+    color: #ffffff !important;
+    opacity: 0.82;
 }
 
 .footer-legal-links {
