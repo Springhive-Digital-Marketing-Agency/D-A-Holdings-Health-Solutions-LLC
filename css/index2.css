@@ -362,13 +362,13 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100;
     border-bottom: 1px solid var(--clr-border-light);
     transition: var(--transition-smooth);
-    padding: 1.1rem 0;
+    padding: 0.2rem 0;
 }
 
 .site-header.scrolled {
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow-soft);
-    padding: 0.85rem 0;
+    padding: 0.2rem 0;
 }
 
 .header-container {
