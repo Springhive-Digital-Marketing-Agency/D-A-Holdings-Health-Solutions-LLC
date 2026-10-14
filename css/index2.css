@@ -3059,10 +3059,28 @@ body, p, li, label, input, textarea, select, button, .btn,
 /* Principles Grid (9 Approach Points) */
 .principles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
+
+/* 3-Column Principles Grid Layout (Centered for 3 Cards) */
+.principles-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .principles-grid-3col {
+        grid-template-columns: 1fr;
+        max-width: 580px;
+    }
+}
+
 
 .principle-item-card {
     background: #ffffff;
