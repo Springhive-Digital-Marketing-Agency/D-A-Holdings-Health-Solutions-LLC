@@ -3095,10 +3095,10 @@ body, p, li, label, input, textarea, select, button, .btn,
 }
 
 .check-icon-circle {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: rgba(101, 156, 152, 0.18);
+    background: rgba(101, 156, 152, 0.16);
     color: var(--clr-sage);
     display: flex;
     align-items: center;
@@ -3106,6 +3106,17 @@ body, p, li, label, input, textarea, select, button, .btn,
     flex-shrink: 0;
     font-size: 14px;
     font-weight: 700;
+    margin-top: 2px;
+    transition: var(--transition-smooth);
+}
+
+.check-icon-circle svg {
+    display: block;
+}
+
+.checklist-card:hover .check-icon-circle {
+    background: var(--clr-sage);
+    color: #ffffff;
 }
 
 .checklist-card h4 {
