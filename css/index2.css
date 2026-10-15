@@ -843,6 +843,172 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   PSYCHOLOGY TODAY DIRECTORY INTEGRATION
+   ========================================================================== */
+.pt-verification-card {
+    background-color: var(--clr-white);
+    border: 1px solid rgba(215, 183, 116, 0.45);
+    border-radius: 18px;
+    padding: 2.2rem 2.8rem;
+    margin-top: 3.5rem;
+    box-shadow: 0 10px 30px rgba(31, 56, 85, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.pt-verification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--clr-gold) 0%, var(--clr-navy) 100%);
+}
+
+.pt-verification-card:hover {
+    border-color: var(--clr-gold);
+    box-shadow: 0 16px 40px rgba(31, 56, 85, 0.1);
+    transform: translateY(-2px);
+}
+
+.pt-card-content {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    flex: 1;
+}
+
+.pt-badge-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(71, 123, 228, 0.25);
+    box-shadow: 0 6px 16px rgba(71, 123, 228, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pt-card-text {
+    flex: 1;
+}
+
+.pt-verified-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: rgba(101, 156, 152, 0.12);
+    color: var(--clr-navy);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(101, 156, 152, 0.25);
+}
+
+.pt-verified-pill svg {
+    color: var(--clr-sage);
+}
+
+.pt-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2vw, 1.85rem);
+    color: var(--clr-navy);
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+}
+
+.pt-card-desc {
+    font-size: 0.98rem;
+    color: var(--clr-text-muted);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 680px;
+}
+
+.pt-card-action {
+    flex-shrink: 0;
+}
+
+.btn-pt {
+    background-color: var(--clr-navy);
+    color: #ffffff;
+    border: 1px solid var(--clr-navy);
+    padding: 1rem 2rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 6px 18px rgba(31, 56, 85, 0.2);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-pt:hover {
+    background-color: var(--clr-gold);
+    border-color: var(--clr-gold);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(182, 154, 101, 0.38);
+}
+
+.btn-pt .pt-external-icon {
+    transition: transform 0.25s ease;
+}
+
+.btn-pt:hover .pt-external-icon {
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 991px) {
+    .pt-verification-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.8rem;
+        padding: 2.2rem 2rem;
+    }
+    .pt-card-content {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .pt-verification-card {
+        padding: 1.8rem 1.4rem;
+        margin-top: 2.5rem;
+    }
+    .pt-card-content {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .pt-card-action {
+        width: 100%;
+    }
+    .btn-pt {
+        width: 100%;
+        justify-content: center;
+        padding: 0.95rem 1.4rem;
+        font-size: 0.84rem;
+    }
+}
+
+/* ==========================================================================
    SERVICES SECTION (6 LARGE VISUAL BLOCKS)
    ========================================================================== */
 .services-grid {
