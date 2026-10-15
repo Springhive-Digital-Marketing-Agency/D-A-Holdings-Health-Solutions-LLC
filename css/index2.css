@@ -2373,7 +2373,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Tablet (Max 1024px) */
+/* Tablet & Laptop (Max 1024px) */
 @media (max-width: 1024px) {
     :root {
         --container-padding: 32px;
@@ -2384,6 +2384,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     .menu-toggle {
         display: flex;
+        order: -1;
+    }
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .header-actions .btn-consultation {
+        order: 1;
     }
     .hero-container {
         grid-template-columns: 1fr;
