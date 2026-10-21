@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,6 +46,16 @@
         </div>
     </aside>
 
+    <!-- Telehealth Notice Top Banner -->
+    <div class="telehealth-top-bar" role="region" aria-label="Telehealth Service Notice">
+        <div class="telehealth-top-container">
+            <span class="telehealth-pill">Notice</span>
+            <strong>Currently Offering Telehealth Services Only</strong>
+            <span>&bull;</span>
+            <span>All appointments are currently provided through telehealth. In-person appointments will be announced when our Waldorf office becomes operational.</span>
+        </div>
+    </div>
+
     <!-- Top Utility Bar -->
     <div class="utility-bar" id="utilityBar">
         <div class="container utility-container">
@@ -77,9 +87,9 @@
     <!-- Main Header -->
     <header class="site-header" id="siteHeader">
         <div class="container header-container">
-            <a href="index2.html" class="brand-logo" aria-label="D &amp; A Holdings Health Solutions LLC" style="overflow: hidden; height: 140px; display: flex; align-items: flex-start;">
-                <img src="images/brand_logo.png" alt="D &amp; A Holdings Health Solutions LLC"
-                    style="height: 180px; width: auto; object-fit: contain; display: block; margin-top: -10px;">
+                        <a href="index2.html" class="brand-logo" aria-label="D &amp; A Holdings Health Solutions LLC">
+                <img src="images/approved_logo.png" alt="D &amp; A Holdings Health Solutions LLC"
+                    style="height: 110px; width: auto; object-fit: contain; display: block;">
             </a>
 
             <!-- Desktop Navigation -->
@@ -96,7 +106,7 @@
                         </svg>
                     </span>
                     <div class="dropdown-menu">
-                        <a href="about.html" class="dropdown-item">About Our Practice</a>
+                        <a href="about.html" class="dropdown-item">About Our Organization</a>
                         <a href="why-choose-us.html" class="dropdown-item">Why Choose Us</a>
                     </div>
                 </div>
@@ -112,16 +122,35 @@
                     </span>
                     <div class="dropdown-menu">
                         <a href="services.html" class="dropdown-item">All Services Overview</a>
-                        <a href="substance-abuse.html" class="dropdown-item">Substance Abuse Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="psychiatric-evaluations.html" class="dropdown-item">Psychiatric Evaluations</a>
+                        <a href="medication-management.html" class="dropdown-item">Medication Management</a>
+                        <a href="telehealth.html" class="dropdown-item">Telehealth Services</a>
                         <div class="dropdown-divider"></div>
                         <a href="child-adolescent.html" class="dropdown-item">Child &amp; Adolescent Care (6&ndash;17)</a>
                         <a href="adult-mental-health.html" class="dropdown-item">Adult Mental Health (18&ndash;67)</a>
-                        <a href="telehealth.html" class="dropdown-item">Telehealth Services</a>
                     </div>
                 </div>
 
                 <a href="conditions.html" class="nav-link">Conditions</a>
-                <a href="new-patients.html" class="nav-link">New Patients</a>
+
+                <!-- New Patients Dropdown -->
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle">
+                        New Patients
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="new-patients.html" class="dropdown-item">New Patients Guide</a>
+                        <a href="insurance-billing.html" class="dropdown-item">Insurance &amp; Billing</a>
+                        <a href="intake-form.html" class="dropdown-item">Patient Intake Form</a>
+                    </div>
+                </div>
+
+                <a href="insurance-billing.html" class="nav-link">Insurance &amp; Billing</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
@@ -148,16 +177,19 @@
             <button class="drawer-close" id="drawerClose" aria-label="Close Menu">&times;</button>
         </div>
         <nav class="drawer-nav">
-            <a href="index2.html" class="drawer-link">Home</a>
+            <a href="index2.html" class="drawer-link active">Home</a>
             <a href="about.html" class="drawer-link">About Us</a>
             <a href="why-choose-us.html" class="drawer-link">Why Choose Us</a>
             <a href="services.html" class="drawer-link">Our Services</a>
-            <a href="substance-abuse.html" class="drawer-link">Substance Abuse Services</a>
+            <a href="psychiatric-evaluations.html" class="drawer-link">Psychiatric Evaluations</a>
+            <a href="medication-management.html" class="drawer-link">Medication Management</a>
+            <a href="telehealth.html" class="drawer-link">Telehealth Services</a>
             <a href="child-adolescent.html" class="drawer-link">Child &amp; Adolescent Mental Health</a>
             <a href="adult-mental-health.html" class="drawer-link">Adult Mental Health</a>
             <a href="conditions.html" class="drawer-link">Conditions We Treat</a>
             <a href="new-patients.html" class="drawer-link">New Patients Guide</a>
-            <a href="telehealth.html" class="drawer-link">Telehealth Services</a>
+            <a href="insurance-billing.html" class="drawer-link">Insurance &amp; Billing</a>
+            <a href="intake-form.html" class="drawer-link">Patient Intake Form</a>
             <a href="faq.html" class="drawer-link">Frequently Asked Questions</a>
             <a href="contact.html" class="drawer-link">Contact Us</a>
         </nav>
@@ -305,55 +337,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Psychology Today Verified Directory Integration -->
-                <div class="pt-verification-card reveal delay-2" id="psychology-today">
-                    <div class="pt-card-content">
-                        <div class="pt-badge-logo" aria-hidden="true">
-                            <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="32" cy="32" r="32" fill="#477BE4" />
-                                <path d="M21.4193 39.2751C21.4193 38.8212 21.7873 38.4533 22.2411 38.4533H23.6581C27.8639 38.4533 29.831 36.8731 29.831 33.6259V22.8093C29.831 19.5653 27.8721 17.9819 23.6581 17.9819H15.2904C14.8366 17.9819 14.4686 18.3499 14.4686 18.8037V47.8398C14.4686 48.2937 14.8366 48.6616 15.2904 48.6616H20.5976C21.0514 48.6616 21.4193 48.2937 21.4193 47.8398V39.2751ZM22.9297 22.893V33.5422C22.9297 33.864 22.7609 33.9799 22.37 33.9799H22.2411C21.7873 33.9799 21.4193 33.612 21.4193 33.1581V23.2803C21.4193 22.8264 21.7873 22.4585 22.2411 22.4585H22.37C22.7609 22.4585 22.9297 22.5905 22.9297 22.8962V22.893Z" fill="white" />
-                                <path d="M43.5424 48.6616C43.9963 48.6616 44.3642 48.2937 44.3642 47.8398V25.6391C44.3642 25.1852 44.7321 24.8173 45.186 24.8173H46.9477H48.7095C49.1633 24.8173 49.5312 24.4494 49.5312 23.9955V18.8037C49.5312 18.3499 49.1633 17.9819 48.7095 17.9819H33.0905C32.6366 17.9819 32.2687 18.3499 32.2687 18.8037V23.9955C32.2687 24.4494 32.6366 24.8173 33.0905 24.8173H34.8501H36.6098C37.0637 24.8173 37.4316 25.1852 37.4316 25.6391V47.8398C37.4316 48.2937 37.7995 48.6616 38.2534 48.6616H43.5424Z" fill="white" />
-                            </svg>
-                        </div>
-                        <div class="pt-card-text">
-                            <span class="pt-verified-pill">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                                <span>Verified Practice Directory</span>
-                            </span>
-                            <h3 class="pt-card-title">Find Us on Psychology Today</h3>
-                            <p class="pt-card-desc">
-                                D &amp; A Holdings Health Solutions LLC is featured on Psychology Today. View our verified directory profile to explore our psychiatric services, focus areas, and practice information.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="pt-card-action">
-                        <!-- 
-                            ========================================================================
-                            PSYCHOLOGY TODAY PROFILE INTEGRATION NOTE:
-                            - Reference Link Provided: https://member.psychologytoday.com/us/profile?u=Tuzoukwu16...
-                              (Verified as a private member management/login portal URL; not for public display)
-                            - Verified Live Public Directory Profile URL:
-                              https://www.psychologytoday.com/us/psychiatrists/theresa-uzoukwu-waldorf-md/1097042
-                            ========================================================================
-                        -->
-                        <a href="https://www.psychologytoday.com/us/psychiatrists/theresa-uzoukwu-waldorf-md/1097042"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-pt"
-                           id="psychologyTodayBtn"
-                           aria-label="Find D &amp; A Holdings Health Solutions on Psychology Today (opens verified profile in a new tab)">
-                            <span>Find Us on Psychology Today</span>
-                            <svg class="pt-external-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -413,11 +396,32 @@
                         </div>
                     </div>
 
-                    <!-- Service 3 -->
+                    <!-- Service 3: Telehealth -->
                     <div class="service-block reveal delay-2">
                         <div class="service-img-wrap">
+                            <img src="images/virtual_care.jpg" alt="Telehealth Virtual Care" class="service-img">
+                            <span class="service-tag">03 &bull; Virtual Care</span>
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">TELEHEALTH SERVICES</h3>
+                            <p class="service-desc">Convenient, secure virtual psychiatric evaluations and follow-ups
+                                from the comfort and privacy of home.</p>
+                            <a href="telehealth.html" class="service-cta">
+                                <span>Learn More</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Assessments -->
+                    <div class="service-block reveal">
+                        <div class="service-img-wrap">
                             <img src="images/mental_assestment.png" alt="Mental Health Assessments" class="service-img">
-                            <span class="service-tag">03 &bull; Assessment</span>
+                            <span class="service-tag">04 &bull; Assessment</span>
                         </div>
                         <div class="service-body">
                             <h3 class="service-title">MENTAL HEALTH ASSESSMENTS</h3>
@@ -434,12 +438,12 @@
                         </div>
                     </div>
 
-                    <!-- Service 4 -->
-                    <div class="service-block reveal">
+                    <!-- Service 5: Treatment Planning -->
+                    <div class="service-block reveal delay-1">
                         <div class="service-img-wrap">
                             <img src="images/personalized_plans.png" alt="Individualized Treatment Planning"
                                 class="service-img">
-                            <span class="service-tag">04 &bull; Personalized Plans</span>
+                            <span class="service-tag">05 &bull; Personalized Plans</span>
                         </div>
                         <div class="service-body">
                             <h3 class="service-title">TREATMENT PLANNING</h3>
@@ -456,38 +460,17 @@
                         </div>
                     </div>
 
-                    <!-- Service 5 -->
-                    <div class="service-block reveal delay-1">
+                    <!-- Service 6: Education & Support -->
+                    <div class="service-block reveal delay-2">
                         <div class="service-img-wrap">
                             <img src="images/legacy_tree.jpg" alt="Patient Education and Support" class="service-img">
-                            <span class="service-tag">05 &bull; Education</span>
+                            <span class="service-tag">06 &bull; Education</span>
                         </div>
                         <div class="service-body">
                             <h3 class="service-title">EDUCATION &amp; SUPPORT</h3>
                             <p class="service-desc">Empowering clients and families with insights into diagnoses, coping
                                 strategies, and wellness routines.</p>
                             <a href="services.html#education" class="service-cta">
-                                <span>Learn More</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 6 -->
-                    <div class="service-block reveal delay-2">
-                        <div class="service-img-wrap">
-                            <img src="images/virtual_care.jpg" alt="Telehealth Virtual Care" class="service-img">
-                            <span class="service-tag">06 &bull; Virtual Care</span>
-                        </div>
-                        <div class="service-body">
-                            <h3 class="service-title">TELEHEALTH SERVICES</h3>
-                            <p class="service-desc">Convenient, secure virtual psychiatric evaluations and follow-ups
-                                from the comfort and privacy of home.</p>
-                            <a href="telehealth.html" class="service-cta">
                                 <span>Learn More</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
@@ -505,169 +488,81 @@
             </div>
         </section>
 
-        <!-- Dedicated Substance Abuse Services Section -->
-        <section class="substance-abuse-section section-padding" id="substance-abuse" style="background-color: #f8fafc; border-top: 1px solid var(--clr-border-light); border-bottom: 1px solid var(--clr-border-light);">
+        <!-- Insurance, Billing & Telehealth Access Section -->
+        <section class="section-padding bg-ivory" id="insurance-telehealth" style="border-top: 1px solid var(--clr-border-light); border-bottom: 1px solid var(--clr-border-light);">
             <div class="container">
                 <div class="section-header-center reveal">
-                    <span class="section-eyebrow text-gold">RECOVERY &amp; SUSTAINABLE WELLNESS</span>
-                    <h2 class="section-heading">Substance Abuse Services</h2>
+                    <span class="section-eyebrow text-gold">ACCESSIBLE &amp; TRANSPARENT CARE</span>
+                    <h2 class="section-heading">Insurance, Billing &amp; Telehealth Access</h2>
                     <p class="section-subtext">
-                        Compassionate, individualized, and evidence-informed support for individuals facing substance use challenges and co-occurring mental health concerns. We partner with clients to foster stability, strengthen coping skills, and achieve lasting recovery.
+                        We strive to make behavioral health care straightforward and accessible. Learn how our virtual appointments work, verify insurance coverage, and connect with our dedicated billing support.
                     </p>
                 </div>
 
-                <!-- Intro Feature Split: Image & What to Expect -->
-                <div class="substance-feature-split reveal" style="margin-bottom: 3.5rem;">
-                    <div class="substance-feature-img">
-                        <img src="images/service_substance.jpg" alt="Compassionate Substance Abuse Support">
+                <!-- 2-Column Split: Telehealth & Hours Notice (Left) / Insurance & Billing Support (Right) -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+                    <!-- Card 1: Telehealth Notice & Business Hours -->
+                    <div class="card reveal" style="background: var(--clr-white); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--clr-border-light); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(23, 107, 112, 0.1); color: var(--clr-teal); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.2rem;">
+                                <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--clr-teal);"></span>
+                                Telehealth Services Only
+                            </div>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--clr-teal); margin-bottom: 1rem;">
+                                Currently Offering Telehealth Services Only
+                            </h3>
+                            <p style="font-size: 1rem; color: var(--clr-charcoal); line-height: 1.7; margin-bottom: 1.5rem;">
+                                All appointments are currently provided through telehealth. In-person appointments will be announced when our Waldorf office becomes operational.
+                            </p>
+                            <div style="background: var(--clr-ivory); border-left: 4px solid var(--clr-teal); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem;">
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--clr-teal); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Operating Hours</h4>
+                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: var(--clr-charcoal); line-height: 1.8;">
+                                    <li><strong>Friday:</strong> 9:00 AM &ndash; 6:00 PM</li>
+                                    <li><strong>Saturday:</strong> 9:00 AM &ndash; 2:00 PM</li>
+                                    <li style="color: var(--clr-charcoal); opacity: 0.75; font-size: 0.88rem;"><em>Sunday &ndash; Thursday: By appointment / Inquire for availability</em></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="telehealth.html" class="btn btn-outline-navy" style="width: 100%; text-align: center; justify-content: center;">Learn About Telehealth Care</a>
+                        </div>
                     </div>
-                    <div class="substance-feature-content">
-                        <span style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clr-navy); display: inline-block; margin-bottom: 0.75rem;">WHAT CLIENTS CAN EXPECT</span>
-                        <h3 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 2.4vw, 2.2rem); color: var(--clr-navy); line-height: 1.25; margin-bottom: 1.2rem;">
-                            Dignity, Confidentiality, and Whole-Person Healing
-                        </h3>
-                        <p style="font-size: 1.02rem; color: var(--clr-text-muted); line-height: 1.75; margin-bottom: 1.5rem;">
-                            Substance use difficulties can affect every area of life&mdash;from family relationships and employment to physical and emotional well-being. At D &amp; A Holdings Health Solutions LLC, our approach begins with active listening. We evaluate each individual's unique needs, strengths, personal circumstances, and recovery goals to develop a thoughtful, collaborative plan of care.
-                        </p>
-                        <div class="substance-highlights-grid">
-                            <div class="substance-highlight-item">
-                                <div class="substance-highlight-icon">&#10003;</div>
-                                <div class="substance-highlight-text">
-                                    <strong>Safe &amp; Confidential</strong>
-                                    A respectful, nonjudgmental therapeutic space.
+
+                    <!-- Card 2: Insurance & Billing Partner -->
+                    <div class="card reveal delay-1" style="background: var(--clr-white); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--clr-border-light); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: rgba(196, 164, 106, 0.15); color: #8a6c2f; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.2rem;">
+                                Insurance Verification &amp; Billing
+                            </div>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--clr-teal); margin-bottom: 1rem;">
+                                Insurance &amp; Billing Support
+                            </h3>
+                            <p style="font-size: 1rem; color: var(--clr-charcoal); line-height: 1.7; margin-bottom: 1.25rem;">
+                                We are committed to making your care accessible and transparent. Our administrative team works directly with patients to verify insurance coverage prior to your first appointment so you understand your benefits and responsibilities clearly.
+                            </p>
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 1rem;">
+                                    <div style="color: var(--clr-teal); font-weight: 700;">&#10003;</div>
+                                    <div style="font-size: 0.95rem; color: var(--clr-charcoal); line-height: 1.5;">
+                                        <strong>Coverage Verification:</strong> We verify benefits before your session to identify applicable copays or deductibles.
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 12px; margin-bottom: 1rem;">
+                                    <div style="color: var(--clr-teal); font-weight: 700;">&#10003;</div>
+                                    <div style="font-size: 0.95rem; color: var(--clr-charcoal); line-height: 1.5;">
+                                        <strong>Professional Billing Management:</strong> Billing inquiries and claims management are facilitated in partnership with <strong>I Work Efficient Billers</strong>.
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 12px;">
+                                    <div style="color: var(--clr-teal); font-weight: 700;">&#10003;</div>
+                                    <div style="font-size: 0.95rem; color: var(--clr-charcoal); line-height: 1.5;">
+                                        <strong>Direct Assistance:</strong> For billing questions or payment assistance, contact our billing team at <a href="tel:2409176203" style="color: var(--clr-teal); font-weight: 600;">240-917-6203</a>.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="substance-highlight-item">
-                                <div class="substance-highlight-icon">&#10003;</div>
-                                <div class="substance-highlight-text">
-                                    <strong>Individualized Care</strong>
-                                    Treatment strategies built around personal recovery goals.
-                                </div>
-                            </div>
-                            <div class="substance-highlight-item">
-                                <div class="substance-highlight-icon">&#10003;</div>
-                                <div class="substance-highlight-text">
-                                    <strong>Dual Diagnosis Care</strong>
-                                    Integrated psychiatric care for co-occurring conditions.
-                                </div>
-                            </div>
-                            <div class="substance-highlight-item">
-                                <div class="substance-highlight-icon">&#10003;</div>
-                                <div class="substance-highlight-text">
-                                    <strong>Relapse Prevention</strong>
-                                    Practical education and sustainable coping mechanisms.
-                                </div>
-                            </div>
                         </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="book-appointment.html" class="btn btn-primary">Request an Appointment</a>
-                            <a href="contact.html" class="btn btn-secondary">Contact Our Team</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Programs & Services Offered Grid -->
-                <div style="margin-bottom: 2.2rem; text-align: center;" class="reveal">
-                    <span style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clr-navy);">PROGRAMS &amp; SERVICES OFFERED</span>
-                    <h3 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 2.2vw, 2.1rem); color: var(--clr-navy); margin-top: 0.4rem;">
-                        Structured Recovery &amp; Clinical Support
-                    </h3>
-                </div>
-
-                <div class="services-grid" style="margin-bottom: 3.5rem;">
-                    <!-- Service 1: Evaluations -->
-                    <div class="service-block reveal" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">01 &bull; CLINICAL ASSESSMENT</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Substance Use Evaluations</h3>
-                            <p class="service-desc">Comprehensive evaluations reviewing current symptoms, psychiatric and medical history, and substance use when clinically relevant to guide diagnosis and treatment needs.</p>
-                            <a href="contact.html" class="service-cta">
-                                <span>Get Started</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 2: IOP -->
-                    <div class="service-block reveal delay-1" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">02 &bull; STRUCTURED CARE</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Intensive Outpatient (IOP)</h3>
-                            <p class="service-desc">Structured, evidence-based outpatient treatment providing focused therapeutic intervention while allowing individuals to maintain work, education, and family responsibilities.</p>
-                            <a href="contact.html" class="service-cta">
-                                <span>Learn More</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 3: PHP -->
-                    <div class="service-block reveal delay-2" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">03 &bull; DAILY SUPPORT</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Partial Hospitalization (PHP)</h3>
-                            <p class="service-desc">Intensive daily support and structured clinical care providing substantial therapeutic intervention and symptom stabilization without requiring an inpatient stay.</p>
-                            <a href="contact.html" class="service-cta">
-                                <span>Learn More</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 4: Relapse Prevention -->
-                    <div class="service-block reveal" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">04 &bull; PREVENTION &amp; SKILLS</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Relapse Prevention &amp; Education</h3>
-                            <p class="service-desc">Practical guidance on recognizing triggers, building healthy routines, stress management, and establishing proactive relapse-prevention strategies for lasting recovery.</p>
-                            <a href="education-support.html" class="service-cta">
-                                <span>Learn More</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 5: Dual Diagnosis -->
-                    <div class="service-block reveal delay-1" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">05 &bull; DUAL DIAGNOSIS</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Co-Occurring Mental Health Care</h3>
-                            <p class="service-desc">Integrated psychiatric care and medication management when clinically appropriate for co-occurring conditions like anxiety, depression, bipolar disorder, or trauma.</p>
-                            <a href="conditions.html" class="service-cta">
-                                <span>View Conditions</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Service 6: PRP -->
-                    <div class="service-block reveal delay-2" style="background-color: var(--clr-white);">
-                        <div class="service-body" style="padding: 2.2rem 2rem;">
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(182, 154, 101, 0.15); color: var(--clr-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                            </div>
-                            <span style="font-size: 0.74rem; font-weight: 700; color: var(--clr-gold); letter-spacing: 0.08em; text-transform: uppercase;">06 &bull; REHABILITATION</span>
-                            <h3 class="service-title" style="margin-top: 0.4rem;">Psychiatric Rehabilitation (PRP)</h3>
-                            <p class="service-desc">Supportive psychiatric rehabilitation dedicated to skill-building, restoring emotional independence, strengthening daily routines, and enhancing overall quality of life.</p>
-                            <a href="contact.html" class="service-cta">
-                                <span>Get Started</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </a>
+                        <div>
+                            <a href="insurance-billing.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">View Insurance &amp; Billing Details</a>
                         </div>
                     </div>
                 </div>
@@ -675,14 +570,14 @@
                 <!-- 24/7 Crisis Hotline Bar -->
                 <div class="substance-crisis-banner reveal">
                     <div style="max-width: 680px;">
-                        <span style="color: var(--clr-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">24/7 CRISIS &amp; SUBSTANCE-USE SUPPORT</span>
+                        <span style="color: var(--clr-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">24/7 CRISIS &amp; MENTAL HEALTH SUPPORT</span>
                         <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: #ffffff; margin: 0.4rem 0 0.6rem;">Immediate Support Is Always Available</h4>
                         <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.88); line-height: 1.6; margin: 0;">
-                            If you or someone you care about is experiencing an acute mental health, suicide, or substance-use crisis, call or text <a href="tel:988" style="color: var(--clr-gold); font-weight: 700; text-decoration: underline;">988</a> for the 24/7 Suicide &amp; Crisis Lifeline. For life-threatening emergencies, call <a href="tel:911" style="color: var(--clr-gold); font-weight: 700; text-decoration: underline;">911</a>.
+                            If you or someone you care about is experiencing an acute mental health, suicide, or emotional crisis, call or text <a href="tel:988" style="color: var(--clr-gold); font-weight: 700; text-decoration: underline;">988</a> for the 24/7 Suicide &amp; Crisis Lifeline. For life-threatening emergencies, call <a href="tel:911" style="color: var(--clr-gold); font-weight: 700; text-decoration: underline;">911</a>.
                         </p>
                     </div>
                     <div>
-                        <a href="book-appointment.html" class="btn btn-gold" style="white-space: nowrap;">Book an Appointment</a>
+                        <a href="book-appointment.html" class="btn btn-gold" style="white-space: nowrap;">Request an Appointment</a>
                     </div>
                 </div>
             </div>
@@ -1229,6 +1124,7 @@
                         <li><a href="index2.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a href="insurance-billing.html">Insurance &amp; Billing</a></li>
                         <li><a href="conditions.html">Conditions We Treat</a></li>
                         <li><a href="new-patients.html">New Patients</a></li>
                         <li><a href="book-appointment.html">Book an Appointment</a></li>
@@ -1243,12 +1139,11 @@
                     <h4>SERVICES</h4>
                     <ul>
                         <li><a href="services.html">All Services</a></li>
-                        <li><a href="substance-abuse.html">Substance Abuse Services</a></li>
                         <li><a href="services.html#evaluations">Psychiatric Evaluations</a></li>
                         <li><a href="services.html#medication-management">Medication Management</a></li>
+                        <li><a href="telehealth.html">Telehealth Services</a></li>
                         <li><a href="child-adolescent.html">Child &amp; Adolescent Care</a></li>
                         <li><a href="adult-mental-health.html">Adult Mental Health</a></li>
-                        <li><a href="telehealth.html">Telehealth Services</a></li>
                     </ul>
                 </div>
 
@@ -1265,11 +1160,12 @@
                     <p style="font-size: 0.82rem; color: var(--clr-text-light); margin-top: 0.8rem;">
                         Do not use website forms or email for emergencies.
                     </p>
-                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.8rem;">BUSINESS HOURS</h4>
-                    <p style="font-size: 0.95rem; color: #ffffff;">
-                        We are currently available for Telehealth services while our office renovation is being completed.<br>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.8rem;">HOURS &amp; TELEHEALTH NOTICE</h4>
+                    <p style="font-size: 0.95rem; color: #ffffff; line-height: 1.6;">
+                        <span style="color: var(--clr-gold); font-weight: 700;">Currently Offering Telehealth Services Only</span><br>
                         Friday: 9:00 AM &ndash; 6:00 PM<br>
-                        Saturday: 9:00 AM &ndash; 2:00 PM
+                        Saturday: 9:00 AM &ndash; 2:00 PM<br>
+                        <span style="font-size: 0.84rem; color: var(--clr-taupe); display: block; margin-top: 4px;">All appointments are currently provided through telehealth. In-person appointments will be announced when our Waldorf office becomes operational.</span>
                     </p>
                 </div>
             </div>

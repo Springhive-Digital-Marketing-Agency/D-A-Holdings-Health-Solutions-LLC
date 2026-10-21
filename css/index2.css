@@ -4,29 +4,41 @@
    ========================================================================== */
 
 :root {
-    /* Primary Colors (Mapped to D&A Holdings) */
-    --clr-ivory: #FAFBFC; /* D&A off-white */
-    --clr-ivory-light: #FFFFFF;
-    --clr-white: #FFFFFF;
-    --clr-navy: #1F3855; /* D&A Navy */
-    --clr-navy-dark: #142438; /* D&A Deep Navy */
-    --clr-navy-light: #2D5079;
+    /* Primary Colors (Client Specified Palette) */
+    --clr-deep-teal: #176B70; /* Primary headings, navigation, appointment buttons */
+    --clr-deep-teal-dark: #104e52; /* Deep teal contrast shade */
+    --clr-deep-teal-light: #20878d;
+    --clr-deep-teal-glow: rgba(23, 107, 112, 0.25);
 
-    /* Secondary Colors (Mapped to D&A Holdings) */
-    --clr-sage: #659C98; /* D&A Teal */
-    --clr-sage-light: #8CB9B5;
-    --clr-stone: #E8ECF0;
-    --clr-taupe: #B0BCC7;
-    --clr-gold: #D7B774; /* D&A Gold */
-    --clr-gold-light: #BFA063;
-    --clr-gold-glow: rgba(215, 183, 116, 0.25);
+    --clr-warm-ivory: #F8F6F0; /* Main background */
+    --clr-warm-ivory-light: #FCFBF8;
+    --clr-white: #FFFFFF;
+
+    /* Legacy Mappings to New Palette */
+    --clr-navy: #176B70; /* Deep Teal for primary headings & appointment buttons */
+    --clr-navy-dark: #104e52; /* Contrast Deep Teal for utility bar & footer */
+    --clr-navy-light: #20878d;
+
+    /* Secondary Colors */
+    --clr-sage: #A8C4B1; /* Soft Sage Green: secondary accents and subtle highlights */
+    --clr-sage-light: #C4D9CB;
+    --clr-sage-subtle: #EEF4F0;
+    --clr-stone: #E5ECE8;
+    --clr-taupe: #9EAEA8;
+    --clr-gold: #C4A46A; /* Muted Gold: subtle decorative accents */
+    --clr-gold-light: #D4BE8D;
+    --clr-gold-glow: rgba(196, 164, 106, 0.25);
+
+    /* Backgrounds */
+    --clr-ivory: #F8F6F0; /* Warm Ivory dominant background */
+    --clr-ivory-light: #FCFBF8;
 
     /* Text & Neutral */
-    --clr-text-main: #1A2330;
-    --clr-text-muted: #4A5568;
-    --clr-text-light: #8896A6;
-    --clr-border: #E8ECF0;
-    --clr-border-light: rgba(232, 236, 240, 0.6);
+    --clr-text-main: #293B3B; /* Dark Charcoal main text */
+    --clr-text-muted: #425858; /* Muted charcoal with high contrast */
+    --clr-text-light: #6A8282;
+    --clr-border: #DCE5E0;
+    --clr-border-light: rgba(168, 196, 177, 0.35);
 
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -39,9 +51,9 @@
 
     /* Transitions & Shadows */
     --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    --shadow-soft: 0 10px 30px rgba(20, 36, 56, 0.06);
-    --shadow-hover: 0 18px 45px rgba(20, 36, 56, 0.12);
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --shadow-soft: 0 10px 30px rgba(16, 78, 82, 0.08);
+    --shadow-hover: 0 18px 45px rgba(16, 78, 82, 0.15);
+    --shadow-card: 0 4px 20px rgba(16, 78, 82, 0.05);
 }
 
 /* Base Reset & Accessibility */
@@ -59,7 +71,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--clr-text-main);
-    background-color: var(--clr-white);
+    background-color: var(--clr-warm-ivory);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -209,46 +221,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: var(--clr-navy);
+    background-color: var(--clr-deep-teal);
     color: var(--clr-white);
-    border-color: var(--clr-navy);
-    box-shadow: 0 4px 15px rgba(32, 59, 74, 0.2);
+    border-color: var(--clr-deep-teal);
+    box-shadow: 0 4px 15px rgba(23, 107, 112, 0.22);
 }
 
 .btn-primary:hover {
-    background-color: var(--clr-gold);
-    border-color: var(--clr-gold);
+    background-color: var(--clr-navy-dark);
+    border-color: var(--clr-navy-dark);
     color: var(--clr-white);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(182, 154, 101, 0.35);
+    box-shadow: 0 8px 24px rgba(16, 78, 82, 0.32);
 }
 
 .btn-outline-navy {
     background-color: transparent;
-    color: var(--clr-navy);
-    border-color: var(--clr-navy);
+    color: var(--clr-deep-teal);
+    border-color: var(--clr-deep-teal);
 }
 
 .btn-outline-navy:hover {
-    background-color: var(--clr-navy);
+    background-color: var(--clr-deep-teal);
     color: var(--clr-white);
     transform: translateY(-2px);
 }
 
 .btn-consultation {
-    background-color: var(--clr-gold);
+    background-color: var(--clr-deep-teal);
     color: var(--clr-white);
-    border-color: var(--clr-gold);
+    border-color: var(--clr-deep-teal);
     padding: 0.85rem 1.75rem;
     font-size: 0.82rem;
-    box-shadow: 0 4px 14px rgba(182, 154, 101, 0.3);
+    box-shadow: 0 4px 14px rgba(23, 107, 112, 0.25);
 }
 
 .btn-consultation:hover {
-    background-color: var(--clr-navy);
-    border-color: var(--clr-navy);
+    background-color: var(--clr-navy-dark);
+    border-color: var(--clr-navy-dark);
     color: var(--clr-white);
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(16, 78, 82, 0.35);
 }
 
 .btn-gold {
@@ -371,10 +384,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.2rem 0;
 }
 
+.site-header .container,
 .header-container {
+    max-width: 1750px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.site-header .nav-link {
+    white-space: nowrap;
 }
 
 .brand-logo {
@@ -408,9 +428,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--clr-text-main);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--clr-deep-teal);
     position: relative;
     padding: 0.25rem 0;
 }
@@ -426,11 +446,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-smooth);
 }
 
-.nav-link:hover {
-    color: var(--clr-navy);
+.nav-link:hover,
+.nav-link.active {
+    color: var(--clr-navy-dark);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -2789,6 +2811,53 @@ body, p, li, label, input, textarea, select, button, .btn,
     opacity: 0.85;
 }
 
+/* Telehealth Notice Top Banner */
+.telehealth-top-bar {
+    background-color: var(--clr-deep-teal);
+    color: #ffffff;
+    padding: 9px 16px;
+    font-size: 15px !important;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid var(--clr-gold);
+}
+
+.telehealth-top-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    line-height: 1.45;
+    font-size: 15px !important;
+}
+
+.telehealth-pill {
+    background-color: var(--clr-gold);
+    color: var(--clr-deep-teal-dark);
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.telehealth-top-bar a {
+    color: var(--clr-white) !important;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.telehealth-top-bar a:hover {
+    color: var(--clr-sage-light) !important;
+}
+
 /* Dropdown Navigation */
 .nav-dropdown {
     position: relative;
@@ -2839,7 +2908,7 @@ body, p, li, label, input, textarea, select, button, .btn,
 .dropdown-item {
     display: block;
     padding: 9px 20px;
-    color: var(--clr-navy) !important;
+    color: var(--clr-deep-teal) !important;
     font-size: 16px !important;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -2859,7 +2928,7 @@ body, p, li, label, input, textarea, select, button, .btn,
 
 /* Inner Page Hero */
 .inner-page-hero {
-    background: linear-gradient(135deg, #121e2d 0%, #1f3855 60%, #29486c 100%);
+    background: linear-gradient(135deg, var(--clr-navy-dark) 0%, var(--clr-deep-teal) 60%, var(--clr-deep-teal-light) 100%);
     color: #ffffff;
     padding: 4.5rem 0 3.8rem;
     position: relative;
