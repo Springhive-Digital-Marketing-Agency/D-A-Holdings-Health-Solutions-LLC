@@ -2808,7 +2808,7 @@ body, p, li, label, input, textarea, select, button, .btn,
 
 /* Top Emergency & Crisis Alert Bar */
 .crisis-top-bar {
-    background: linear-gradient(90deg, #6b1414 0%, #8f2323 50%, #6b1414 100%);
+    background: #B09777;
     color: #ffffff;
     padding: 8px 15px;
     font-size: 16px !important;
@@ -3247,15 +3247,15 @@ body, p, li, label, input, textarea, select, button, .btn,
 /* Official Crisis Disclaimer Notice Box */
 .emergency-disclaimer-card {
     background: #fff8f6;
-    border-left: 5px solid #b91c1c;
+    border-left: 5px solid #B09777;
     border-radius: 12px;
     padding: 2rem 2.2rem;
     margin: 2.8rem 0 0 0;
-    box-shadow: 0 4px 20px rgba(185, 28, 28, 0.08);
+    box-shadow: 0 4px 20px rgba(176, 151, 119, 0.12);
 }
 
 .emergency-disclaimer-card h3 {
-    color: #991b1b;
+    color: #104E52;
     font-size: 1.25rem;
     margin-bottom: 0.8rem;
     display: flex;
@@ -3277,7 +3277,7 @@ body, p, li, label, input, textarea, select, button, .btn,
 
 .emergency-hotline-highlight {
     background: #fee2e2;
-    color: #991b1b;
+    color: #104E52;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: 700;
