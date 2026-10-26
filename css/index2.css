@@ -575,18 +575,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .eyebrow-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: rgba(182, 154, 101, 0.12);
-    color: var(--clr-navy);
-    padding: 0.45rem 1.1rem;
-    border-radius: 30px;
-    font-size: 0.76rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    margin-bottom: 1.6rem;
-    border: 1px solid rgba(182, 154, 101, 0.25);
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    background-color: rgba(182, 154, 101, 0.12) !important;
+    color: var(--clr-navy) !important;
+    padding: 0.45rem 1.1rem !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+    margin-bottom: 1.6rem !important;
+    border: 1px solid rgba(182, 154, 101, 0.25) !important;
+    flex-wrap: nowrap !important;
+    line-height: 1.2 !important;
+}
+
+.eyebrow-badge span,
+.eyebrow-badge .eyebrow-text {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+    display: inline-block !important;
+}
+
+@media (max-width: 540px) {
+    .eyebrow-badge {
+        font-size: 16px !important;
+        letter-spacing: 0 !important;
+        padding: 0.35rem 0.75rem !important;
+        gap: 0.35rem !important;
+    }
+    .eyebrow-badge span,
+    .eyebrow-badge .eyebrow-text {
+        font-size: 16px !important;
+        letter-spacing: 0 !important;
+    }
 }
 
 .badge-dot {
@@ -3387,7 +3415,7 @@ body, p, li, label, input, textarea, select, button, .btn,
    ========================================================================== */
 body,
 p,
-span:not(.trust-stars):not(.badge-dot):not(.utility-dot),
+span:not(.trust-stars):not(.badge-dot):not(.utility-dot):not(.eyebrow-text):not(.eyebrow-badge):not(.eyebrow-badge *),
 a,
 li,
 label,
@@ -3416,8 +3444,6 @@ button,
 .inner-badge,
 .hero-description,
 .hero-desc,
-.eyebrow-badge,
-.eyebrow-badge span,
 .section-eyebrow,
 .section-subtext,
 .service-tag,
