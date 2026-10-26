@@ -1805,6 +1805,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   INSURANCE, BILLING & TELEHEALTH 2-CARD GRID
+   ========================================================================== */
+.insurance-telehealth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+/* ==========================================================================
    RESOURCES / BLOG SECTION
    ========================================================================== */
 .resources-header-flex {
@@ -2510,18 +2520,21 @@ h1, h2, h3, h4, h5, h6 {
     .wellness-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .insurance-telehealth-grid {
+        grid-template-columns: 1fr !important;
+    }
     #patient-resources .container > div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
     }
     .resources-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2.8rem;
     }
     .contact-details-list {
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: 1fr !important;
         gap: 1.25rem;
     }
     .contact-form-col {
