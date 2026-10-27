@@ -270,16 +270,40 @@ document.addEventListener('DOMContentLoaded', () => {
        8. HERO IMAGE SLIDER ANIMATION
        ========================================================================== */
     const heroImg = document.querySelector('.hero-main-img');
+    const heroMobileSource = document.getElementById('heroMobileSource');
     if (heroImg) {
-        const heroImages = [
+        const desktopHeroImages = [
             'images/hero_slide1.jpg',
             'images/hero_slide2.jpg',
             'images/hero_slide3.jpg'
         ];
+        const mobileHeroImages = [
+            'images/hero_slide1_mobile.jpg',
+            'images/hero_slide2_mobile.jpg',
+            'images/hero_slide3_mobile.jpg'
+        ];
         let currentHeroIdx = 0;
 
+        function updateHeroImageSources() {
+            const isMobile = window.innerWidth <= 768;
+            if (heroMobileSource) {
+                heroMobileSource.srcset = mobileHeroImages[currentHeroIdx];
+            }
+            if (isMobile) {
+                heroImg.src = mobileHeroImages[currentHeroIdx];
+            } else {
+                heroImg.src = desktopHeroImages[currentHeroIdx];
+            }
+        }
+
+        if (window.innerWidth <= 768) {
+            heroImg.src = mobileHeroImages[0];
+        }
+
+        window.addEventListener('resize', updateHeroImageSources);
+
         setInterval(() => {
-            currentHeroIdx = (currentHeroIdx + 1) % heroImages.length;
+            currentHeroIdx = (currentHeroIdx + 1) % desktopHeroImages.length;
             
             // Remove animation class to reset it
             heroImg.classList.remove('hero-animating');
@@ -288,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
             void heroImg.offsetWidth;
             
             // Change image source
-            heroImg.src = heroImages[currentHeroIdx];
+            updateHeroImageSources();
             
             // Add animation class back
             heroImg.classList.add('hero-animating');
