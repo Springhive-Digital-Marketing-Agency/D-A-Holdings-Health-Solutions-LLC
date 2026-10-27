@@ -3787,7 +3787,7 @@ button,
         font-size: 12px !important;
     }
 
-    /* All buttons font size across the entire website */
+    /* All buttons font size across the entire website including services */
     button,
     .btn,
     a.btn,
@@ -3803,8 +3803,46 @@ button,
     .hero-cta-group .btn,
     .cta-btn-group .btn,
     .editorial-link,
+    .service-cta,
+    .service-cta span,
+    .service-block .service-cta,
+    .service-block .service-cta span,
+    .services-grid .service-cta,
+    .services-grid .service-cta span,
+    .service-card-btn,
     input[type="submit"],
     input[type="button"] {
         font-size: 12px !important;
+        letter-spacing: 0.02em !important;
+    }
+}
+
+@media (max-width: 480px) {
+    button,
+    .btn,
+    a.btn,
+    .btn-primary,
+    .btn-outline-navy,
+    .btn-consultation,
+    .btn-gold,
+    .btn-outline-white,
+    .btn-full,
+    .btn-pt,
+    .btn-submit,
+    .btn-appointment,
+    .hero-cta-group .btn,
+    .cta-btn-group .btn,
+    .editorial-link,
+    .service-cta,
+    .service-cta span,
+    .service-block .service-cta,
+    .service-block .service-cta span,
+    .services-grid .service-cta,
+    .services-grid .service-cta span,
+    .service-card-btn,
+    input[type="submit"],
+    input[type="button"] {
+        font-size: 12px !important;
+        letter-spacing: 0.01em !important;
     }
 }
