@@ -2436,7 +2436,7 @@ h1, h2, h3, h4, h5, h6 {
         min-height: 500px;
     }
     .hero-main-img {
-        height: 480px;
+        height: 500px;
     }
     .why-img {
         height: 500px;
@@ -2493,7 +2493,7 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 100%;
     }
     .hero-main-img {
-        height: 440px;
+        height: 400px;
         object-position: 80% center;
     }
     .cta-banner-card .btn-outline-white {
@@ -2628,12 +2628,21 @@ h1, h2, h3, h4, h5, h6 {
     .utility-left span {
         white-space: nowrap !important;
     }
+    .hero-main-img {
+        height: 400px !important;
+    }
 }
 
-/* Ensure email is visible in Laptop & Desktop views (1024px and above) */
+/* Ensure email is visible in Laptop & Desktop views (1024px and above) and hero image height 500px in laptop */
 @media (min-width: 1024px) {
     .utility-right a[href^="mailto:"] {
         display: inline-flex !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .hero-main-img {
+        height: 500px !important;
     }
 }
 
