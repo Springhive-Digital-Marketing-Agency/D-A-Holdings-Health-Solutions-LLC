@@ -2639,6 +2639,11 @@ h1, h2, h3, h4, h5, h6 {
     .hero-cta-group {
         justify-content: flex-start !important;
     }
+    .btn,
+    .hero-cta-group .btn,
+    .editorial-link {
+        letter-spacing: 0.02em !important;
+    }
     div[style*="text-align: center"] {
         text-align: left !important;
     }
@@ -2831,6 +2836,11 @@ h1, h2, h3, h4, h5, h6 {
     .appointment-form-container {
         padding: 1.25rem 0.9rem;
         border-radius: 12px;
+    }
+    .btn,
+    .hero-cta-group .btn,
+    .editorial-link {
+        letter-spacing: 0.01em !important;
     }
 }
 
