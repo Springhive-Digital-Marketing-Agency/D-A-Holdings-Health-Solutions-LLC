@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
     .eyebrow-badge {
-        font-size: 10.5px !important;
+        font-size: 12px !important;
         letter-spacing: 0 !important;
         padding: 0.35rem 0.75rem !important;
         gap: 0.35rem !important;
@@ -614,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .eyebrow-badge span,
     .eyebrow-badge .eyebrow-text {
-        font-size: 10.5px !important;
+        font-size: 12px !important;
         letter-spacing: 0 !important;
         white-space: normal !important;
         line-height: 1.35 !important;
@@ -623,16 +623,16 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
     .eyebrow-badge {
-        font-size: 9.5px !important;
+        font-size: 12px !important;
         letter-spacing: 0 !important;
-        padding: 0.25rem 0.55rem !important;
+        padding: 0.3rem 0.65rem !important;
         gap: 0.3rem !important;
         white-space: normal !important;
         line-height: 1.35 !important;
     }
     .eyebrow-badge span,
     .eyebrow-badge .eyebrow-text {
-        font-size: 9.5px !important;
+        font-size: 12px !important;
         letter-spacing: 0 !important;
         white-space: normal !important;
         line-height: 1.35 !important;
@@ -3773,5 +3773,38 @@ button,
     }
     .substance-crisis-banner {
         padding: 1.8rem 1.4rem;
+    }
+}
+
+/* ==========================================================================
+   MOBILE VIEW ONLY: 12PX BUTTONS & EYEBROW BADGE (ENTIRE WEBSITE)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Eyebrow badge font size */
+    .eyebrow-badge,
+    .eyebrow-badge span,
+    .eyebrow-badge .eyebrow-text {
+        font-size: 12px !important;
+    }
+
+    /* All buttons font size across the entire website */
+    button,
+    .btn,
+    a.btn,
+    .btn-primary,
+    .btn-outline-navy,
+    .btn-consultation,
+    .btn-gold,
+    .btn-outline-white,
+    .btn-full,
+    .btn-pt,
+    .btn-submit,
+    .btn-appointment,
+    .hero-cta-group .btn,
+    .cta-btn-group .btn,
+    .editorial-link,
+    input[type="submit"],
+    input[type="button"] {
+        font-size: 12px !important;
     }
 }
