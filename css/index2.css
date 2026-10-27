@@ -2608,8 +2608,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Tablet View Only (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Tablet View Only (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
     /* Hide email in tablet view only so service text stays on one line */
     .utility-right a[href^="mailto:"],
     .utility-right .utility-divider {
@@ -2618,6 +2618,13 @@ h1, h2, h3, h4, h5, h6 {
     .utility-left,
     .utility-left span {
         white-space: nowrap !important;
+    }
+}
+
+/* Ensure email is visible in Laptop & Desktop views (1024px and above) */
+@media (min-width: 1024px) {
+    .utility-right a[href^="mailto:"] {
+        display: inline-flex !important;
     }
 }
 
