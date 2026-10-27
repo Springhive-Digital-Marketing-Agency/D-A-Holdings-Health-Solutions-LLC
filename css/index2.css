@@ -2467,17 +2467,6 @@ h1, h2, h3, h4, h5, h6 {
         --container-padding: 32px;
         --section-padding: 4.5rem 0;
     }
-    
-    /* Hide email in tablet view so service text stays on one line */
-    .utility-right a[href^="mailto:"],
-    .utility-right .utility-divider {
-        display: none !important;
-    }
-    .utility-left,
-    .utility-left span {
-        white-space: nowrap !important;
-    }
-
     .desktop-nav {
         display: none;
     }
@@ -2616,6 +2605,19 @@ h1, h2, h3, h4, h5, h6 {
     }
     .featured-care-grid .featured-care-visual {
         order: -1;
+    }
+}
+
+/* Tablet View Only (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Hide email in tablet view only so service text stays on one line */
+    .utility-right a[href^="mailto:"],
+    .utility-right .utility-divider {
+        display: none !important;
+    }
+    .utility-left,
+    .utility-left span {
+        white-space: nowrap !important;
     }
 }
 
