@@ -2467,6 +2467,17 @@ h1, h2, h3, h4, h5, h6 {
         --container-padding: 32px;
         --section-padding: 4.5rem 0;
     }
+    
+    /* Hide email in tablet view so service text stays on one line */
+    .utility-right a[href^="mailto:"],
+    .utility-right .utility-divider {
+        display: none !important;
+    }
+    .utility-left,
+    .utility-left span {
+        white-space: nowrap !important;
+    }
+
     .desktop-nav {
         display: none;
     }
