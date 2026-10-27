@@ -2918,7 +2918,8 @@ body, p, li, label, input, textarea, select, button, .btn,
 }
 
 .nav-dropdown:hover .nav-dropdown-toggle svg,
-.nav-dropdown:focus-within .nav-dropdown-toggle svg {
+.nav-dropdown:focus-within .nav-dropdown-toggle svg,
+.nav-dropdown.active .nav-dropdown-toggle svg {
     transform: rotate(180deg);
 }
 
@@ -2940,10 +2941,12 @@ body, p, li, label, input, textarea, select, button, .btn,
 }
 
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(4px);
+    pointer-events: auto;
 }
 
 .dropdown-item {

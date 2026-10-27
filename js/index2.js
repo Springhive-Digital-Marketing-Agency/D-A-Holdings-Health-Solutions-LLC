@@ -296,18 +296,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       9. TOUCH DROPDOWN NAVIGATION ENHANCEMENT
+       9. DROPDOWN NAVIGATION ENHANCEMENT (Click, Touch & Hover)
        ========================================================================== */
     const navDropdowns = document.querySelectorAll('.nav-dropdown');
     navDropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.nav-dropdown-toggle');
         if (toggle) {
+            toggle.setAttribute('tabindex', '0');
+            toggle.setAttribute('role', 'button');
+            toggle.setAttribute('aria-haspopup', 'true');
+
             toggle.addEventListener('click', (e) => {
-                if (window.innerWidth <= 1024) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
+                e.stopPropagation();
+                const wasActive = dropdown.classList.contains('active');
+                navDropdowns.forEach(d => d.classList.remove('active'));
+                if (!wasActive) {
+                    dropdown.classList.add('active');
                 }
             });
+
+            toggle.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const wasActive = dropdown.classList.contains('active');
+                    navDropdowns.forEach(d => d.classList.remove('active'));
+                    if (!wasActive) {
+                        dropdown.classList.add('active');
+                    }
+                }
+            });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-dropdown')) {
+            navDropdowns.forEach(d => d.classList.remove('active'));
         }
     });
 
