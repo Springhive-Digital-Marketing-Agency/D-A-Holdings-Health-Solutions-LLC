@@ -2610,12 +2610,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet View Only (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-    /* Hide email in tablet view only so service text stays on one line */
+    /* Hide email in tablet view only so service text stays on one line and centered */
+    .utility-right,
     .utility-right a[href^="mailto:"],
     .utility-right .utility-divider {
         display: none !important;
     }
-    .utility-left,
+    .utility-container {
+        justify-content: center !important;
+    }
+    .utility-left {
+        justify-content: center !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
     .utility-left span {
         white-space: nowrap !important;
     }
