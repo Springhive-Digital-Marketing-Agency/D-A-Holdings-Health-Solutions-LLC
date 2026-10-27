@@ -2461,11 +2461,14 @@ h1, h2, h3, h4, h5, h6 {
         order: 1;
     }
     .hero-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 3.5rem;
     }
     .hero-visual-col {
         order: -1; /* Move image to the top */
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
     }
     .hero-main-img {
         height: 440px;
@@ -2626,11 +2629,25 @@ h1, h2, h3, h4, h5, h6 {
     .hero-section {
         padding: 3.5rem 0 4rem;
     }
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .hero-visual-col {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
     .hero-heading {
         font-size: 2.4rem;
         line-height: 1.15;
     }
     .hero-main-img {
+        width: 100%;
+        max-width: 100%;
         height: 320px;
         border-radius: 12px;
         object-position: center center;
