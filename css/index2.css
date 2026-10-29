@@ -3410,6 +3410,40 @@ body, p, li, label, input, textarea, select, button, .btn,
     opacity: 0.85;
 }
 
+/* Crisis Notice Section (Positioned Directly Above Footer) */
+.crisis-notice-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-bottom: none !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* Laptop View (Max 1440px) */
+@media (max-width: 1440px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+/* Tablet View (Max 1024px) */
+@media (max-width: 1024px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+/* Mobile View (Max 767px) */
+@media (max-width: 767px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
 /* Telehealth Notice Top Banner */
 .telehealth-top-bar {
     background-color: var(--clr-deep-teal);
