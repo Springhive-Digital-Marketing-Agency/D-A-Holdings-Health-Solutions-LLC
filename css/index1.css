@@ -553,3 +553,117 @@ img {
         display: none; /* Add mobile menu later if needed */
     }
 }
+
+/* ==========================================================================
+   Crisis Notice Bar
+   ========================================================================== */
+.crisis-top-bar {
+    background: #B09777;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-size: 16px !important;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.crisis-top-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    line-height: 1.4;
+    font-size: 16px !important;
+}
+
+.crisis-pill {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.crisis-top-bar a {
+    color: #ffe082 !important;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+    font-size: 16px !important;
+}
+
+.crisis-top-bar a:hover {
+    opacity: 0.85;
+}
+
+.crisis-notice-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-bottom: none !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+@media (max-width: 1440px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .crisis-notice-bar {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+}
+/* Telehealth Notice Top Banner */
+.telehealth-top-bar {
+    background-color: #176B70;
+    color: #ffffff;
+    padding: 9px 16px;
+    font-size: 15px !important;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #C4A46A;
+}
+
+.telehealth-top-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    line-height: 1.4;
+    font-size: 15px !important;
+}
+
+.telehealth-pill {
+    background-color: #C4A46A;
+    color: #104e52;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+}
