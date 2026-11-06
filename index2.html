@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="css/index2.css">
     
     <style>
+        /* Hide top Telehealth Notice banner and Utility bar on tablet and mobile views */
+        @media (max-width: 1024px) {
+            .telehealth-top-bar,
+            .utility-bar {
+                display: none !important;
+            }
+        }
         /* Custom adjustment for Diagnostic Care image on laptop views */
         @media screen and (min-width: 1024px) and (max-width: 1440px) {
             .diag-img-laptop {
