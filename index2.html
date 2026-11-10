@@ -19,15 +19,196 @@
     <link rel="stylesheet" href="css/index2.css">
     
     <style>
-        /* Hide top Telehealth Notice banner and Utility bar on tablet and mobile views */
-        @media (max-width: 1024px) {
-            .telehealth-top-bar,
-            .utility-bar {
-                display: none !important;
-            }
+        /* ==========================================================================
+           REPOSITIONED TELEHEALTH NOTICE STRIP
+           ========================================================================== */
+        .telehealth-notice-strip {
+            background-color: var(--clr-deep-teal, #176B70);
+            color: #ffffff;
+            padding: 0.85rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            border-bottom: 3px solid var(--clr-gold, #C4A46A);
+            position: relative;
+            z-index: 10;
         }
-        /* Custom adjustment for Diagnostic Care image on laptop views */
+        .telehealth-notice-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        .telehealth-notice-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #ffffff;
+        }
+        .telehealth-notice-content .telehealth-pill {
+            background-color: var(--clr-gold, #C4A46A);
+            color: var(--clr-navy-dark, #0d252a);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .telehealth-notice-title {
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .telehealth-notice-dot {
+            color: var(--clr-gold, #C4A46A);
+            font-weight: bold;
+        }
+        .telehealth-notice-msg {
+            color: rgba(255, 255, 255, 0.92);
+        }
+        .telehealth-notice-action {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .telehealth-notice-phone {
+            display: inline-flex;
+            align-items: center;
+            color: #ffffff !important;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 5px 12px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease;
+        }
+        .telehealth-notice-phone:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+        .telehealth-notice-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+        }
+        .telehealth-notice-btn:hover {
+            background: var(--clr-gold, #C4A46A);
+            color: var(--clr-navy-dark, #0d252a) !important;
+            border-color: var(--clr-gold, #C4A46A);
+        }
+
+        /* ==========================================================================
+           HEADER STICKY & PROPORTION REFINEMENT
+           ========================================================================== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            padding: 0.4rem 0 !important;
+            transition: padding 0.2s ease, box-shadow 0.2s ease;
+        }
+        .site-header .brand-logo img {
+            height: 95px !important;
+            width: auto !important;
+            max-width: none !important;
+            object-fit: contain !important;
+            display: block !important;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE VIEWPORT ADJUSTMENTS (Laptop Reference: Image 2)
+           ========================================================================== */
+        /* LAPTOP VIEW (1024px - 1440px) - Client Reference View */
         @media screen and (min-width: 1024px) and (max-width: 1440px) {
+            .site-header {
+                padding: 0.35rem 0 !important;
+            }
+            .site-header .brand-logo img {
+                height: 90px !important;
+            }
+            .desktop-nav {
+                gap: 1.25rem !important;
+            }
+            .desktop-nav .nav-link {
+                font-size: 15px !important;
+            }
+            .header-actions .btn-consultation {
+                padding: 0.55rem 1.3rem !important;
+                font-size: 0.86rem !important;
+            }
+
+            /* Hero Section: perfectly fitted for laptop screens without cutoff */
+            .hero-section {
+                padding: 2.2rem 0 2.5rem 0 !important;
+            }
+            .hero-container {
+                gap: 2.5rem !important;
+                align-items: center !important;
+            }
+            .eyebrow-badge {
+                margin-bottom: 0.75rem !important;
+                padding: 4px 12px !important;
+            }
+            .eyebrow-badge span,
+            .eyebrow-badge .eyebrow-text {
+                font-size: 13px !important;
+                letter-spacing: 0.02em !important;
+            }
+            /* Smaller characters per client request */
+            .hero-heading {
+                font-size: 2.35rem !important;
+                line-height: 1.12 !important;
+                letter-spacing: -0.01em !important;
+                margin-bottom: 0.85rem !important;
+            }
+            .hero-description {
+                font-size: 0.95rem !important;
+                line-height: 1.55 !important;
+                margin-bottom: 1.1rem !important;
+                max-width: 500px !important;
+            }
+            .hero-cta-group {
+                margin-bottom: 0.85rem !important;
+                gap: 0.8rem !important;
+            }
+            .hero-cta-group .btn {
+                padding: 0.65rem 1.4rem !important;
+                font-size: 0.86rem !important;
+            }
+            .hero-trust-micro {
+                margin-top: 0 !important;
+            }
+            .hero-trust-micro span {
+                font-size: 13px !important;
+            }
+            .hero-main-img {
+                height: 405px !important;
+                object-fit: cover !important;
+                object-position: right center !important;
+                border-radius: 16px !important;
+            }
+
+            /* Diagnostic Care image on laptop */
             .diag-img-laptop {
                 object-position: 100% center !important;
                 transform: scale(1.15) !important;
@@ -37,55 +218,119 @@
                 transform: scale(1.22) !important;
             }
         }
+
+        /* LARGE DESKTOP (1441px+) */
+        @media screen and (min-width: 1441px) {
+            .site-header {
+                padding: 0.45rem 0 !important;
+            }
+            .site-header .brand-logo img {
+                height: 100px !important;
+            }
+            .hero-section {
+                padding: 3.2rem 0 3.8rem 0 !important;
+            }
+            .hero-heading {
+                font-size: 2.85rem !important;
+                line-height: 1.12 !important;
+                margin-bottom: 1.15rem !important;
+            }
+            .hero-main-img {
+                height: 460px !important;
+                border-radius: 18px !important;
+            }
+        }
+
+        /* TABLET (768px - 1023px) */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .site-header {
+                padding: 0.35rem 0 !important;
+            }
+            .site-header .brand-logo img {
+                height: 82px !important;
+            }
+            .telehealth-notice-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            .telehealth-notice-content {
+                font-size: 0.92rem;
+            }
+            .hero-section {
+                padding: 2.5rem 0 3rem 0 !important;
+            }
+            .hero-heading {
+                font-size: 2.25rem !important;
+                line-height: 1.15 !important;
+            }
+            .hero-main-img {
+                height: 380px !important;
+                border-radius: 14px !important;
+            }
+        }
+
+        /* MOBILE (Max 767px) */
+        @media screen and (max-width: 767px) {
+            .site-header {
+                padding: 0.25rem 0 !important;
+            }
+            .site-header .brand-logo img {
+                height: 68px !important;
+            }
+            .telehealth-notice-strip {
+                padding: 0.75rem 0;
+            }
+            .telehealth-notice-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            .telehealth-notice-content {
+                font-size: 0.88rem;
+                line-height: 1.45;
+                gap: 8px;
+            }
+            .telehealth-notice-bullet {
+                display: none;
+            }
+            .telehealth-notice-desc {
+                display: block;
+                width: 100%;
+            }
+            .telehealth-notice-action {
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .hero-section {
+                padding: 1.8rem 0 2.2rem 0 !important;
+            }
+            .hero-heading {
+                font-size: 1.85rem !important;
+                line-height: 1.18 !important;
+                margin-bottom: 0.85rem !important;
+            }
+            .hero-description {
+                font-size: 0.92rem !important;
+                line-height: 1.5 !important;
+            }
+            .hero-main-img {
+                height: 280px !important;
+                border-radius: 12px !important;
+            }
+        }
     </style>
 </head>
 
 <body>
-
-        <!-- Telehealth Notice Top Banner -->
-    <div class="telehealth-top-bar" role="region" aria-label="Telehealth Service Notice">
-        <div class="telehealth-top-container">
-            <span class="telehealth-pill">Notice</span>
-            <strong>Currently Offering Telehealth Services Only</strong>
-            <span>&bull;</span>
-            <span>We are currently providing telehealth services only. In-person appointments are not available at this time. In-person services will be announced when our office becomes operational.</span>
-        </div>
-    </div>
-
-    <!-- Top Utility Bar -->
-    <div class="utility-bar" id="utilityBar">
-        <div class="container utility-container">
-            <div class="utility-left">
-                <span class="utility-dot"></span>
-                <span>Serving Children &amp; Adolescents (6&ndash;17) and Adults (18 and Above) &bull; Waldorf, MD</span>
-            </div>
-            <div class="utility-right">
-                <a href="tel:2409176203" class="utility-link" aria-label="Call D & A Holdings Health Solutions">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                        </path>
-                    </svg>
-                    <span>240-917-6203</span>
-                </a>
-                <span class="utility-divider">|</span>
-                <a href="mailto:info@dahhealthsolutions.com" class="utility-link" aria-label="Email D & A Holdings Health Solutions">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span>info@dahhealthsolutions.com</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Header -->
     <header class="site-header" id="siteHeader">
         <div class="container header-container">
                         <a href="index2.html" class="brand-logo" aria-label="D &amp; A Holdings Health Solutions LLC">
                 <img src="images/approved_logo.png" alt="D &amp; A Holdings Health Solutions LLC"
-                    style="height: 110px; width: auto; object-fit: contain; display: block;">
+                    style="height: 92px; width: auto; object-fit: contain; display: block;">
             </a>
 
             <!-- Desktop Navigation -->
@@ -207,8 +452,8 @@
                         IMPROVING LIVES.
                     </h1>
                     <p class="hero-description">
-                        Welcome to D &amp; A Holdings Health Solutions LLC, where we provide individualized behavioral
-                        and mental health services in a compassionate, respectful, and supportive environment.
+                        Welcome to D &amp; A Holdings Health Solutions LLC, providing compassionate, individualized behavioral
+                        and mental health services for children and adolescents (ages 6&ndash;17) and adults and older adults (ages 18 and above) in Waldorf, MD.
                     </p>
                     <div class="hero-cta-group">
                         <a href="book-appointment.html" class="btn btn-primary">Request an Appointment</a>
@@ -231,6 +476,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Trust Bar (4 Minimalist Core Pillars) -->
         <section class="trust-bar-section">
@@ -264,7 +510,7 @@
                         </div>
                         <div class="trust-info">
                             <h3>ACROSS THE LIFESPAN</h3>
-                            <p>Specialized care for youth ages 6&ndash;17 and adults and older adults (ages 18 and above).</p>
+                            <p>Serving Children &amp; Adolescents (6&ndash;17) and Adults (18 and Above) &bull; Waldorf, MD</p>
                         </div>
                     </div>
 
@@ -582,7 +828,7 @@
             <div class="container">
                 <div class="section-header-center reveal">
                     <span class="section-eyebrow text-sage">CARE ACROSS THE LIFESPAN</span>
-                    <h2 class="section-heading">Tailored care for every developmental stage.</h2>
+                    <h2 class="section-heading">Serving Children &amp; Adolescents (6&ndash;17) and Adults (18 and Above) &bull; Waldorf, MD</h2>
                     <p class="section-subtext">
                         We serve children and adolescents between ages 6 and 17, and adults and older adults (ages 18 and above),
                         honoring their distinct developmental and emotional needs.
@@ -1085,6 +1331,22 @@
         </section>
 
     </main>
+
+    <!-- Telehealth Service Notice (Repositioned Above Crisis Notice) -->
+    <section class="telehealth-notice-strip" role="region" aria-label="Telehealth Service Notice">
+        <div class="container telehealth-notice-container">
+            <div class="telehealth-notice-content">
+                <span class="telehealth-pill">Notice</span>
+                <strong class="telehealth-notice-title">Currently Offering Telehealth Services Only</strong>
+                <span class="telehealth-notice-dot">&bull;</span>
+                <span class="telehealth-notice-msg">We are currently providing telehealth services only. In-person appointments are not available at this time. In-person services will be announced when our office becomes operational.</span>
+            </div>
+            <div class="telehealth-notice-action">
+                <a href="tel:2409176203" class="telehealth-notice-phone"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -1px; margin-right: 4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>240-917-6203</a>
+                <a href="telehealth.html" class="telehealth-notice-btn">Learn More &rarr;</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Crisis Notice Section (Repositioned Directly Above Footer) -->
     <aside class="crisis-top-bar crisis-notice-bar" id="crisis-notice" aria-label="Crisis and Emergency Information">
