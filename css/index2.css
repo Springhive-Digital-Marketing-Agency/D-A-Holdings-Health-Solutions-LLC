@@ -4396,3 +4396,129 @@ button,
         letter-spacing: 0.01em !important;
     }
 }
+/* ==========================================================================
+   REPOSITIONED TELEHEALTH NOTICE STRIP (Site-Wide)
+   ========================================================================== */
+.telehealth-notice-strip {
+    background-color: var(--clr-deep-teal, #176B70);
+    color: #ffffff;
+    padding: 0.85rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 3px solid var(--clr-gold, #C4A46A);
+    position: relative;
+    z-index: 10;
+}
+.telehealth-notice-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.telehealth-notice-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.telehealth-notice-content .telehealth-pill {
+    background-color: var(--clr-gold, #C4A46A);
+    color: var(--clr-navy-dark, #0d252a);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.telehealth-notice-title {
+    font-weight: 700;
+    color: #ffffff;
+}
+.telehealth-notice-dot {
+    color: var(--clr-gold, #C4A46A);
+    font-weight: bold;
+}
+.telehealth-notice-msg {
+    color: rgba(255, 255, 255, 0.92);
+}
+.telehealth-notice-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.telehealth-notice-phone {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff !important;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+.telehealth-notice-phone:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+.telehealth-notice-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+.telehealth-notice-btn:hover {
+    background: var(--clr-gold, #C4A46A);
+    color: var(--clr-navy-dark, #0d252a) !important;
+    border-color: var(--clr-gold, #C4A46A);
+}
+@media screen and (max-width: 1023px) {
+    .telehealth-notice-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .telehealth-notice-content {
+        font-size: 0.92rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .telehealth-notice-strip {
+        padding: 0.75rem 0;
+    }
+    .telehealth-notice-content {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        gap: 8px;
+    }
+    .telehealth-notice-dot {
+        display: none;
+    }
+    .telehealth-notice-msg {
+        display: block;
+        width: 100%;
+    }
+    .telehealth-notice-action {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
