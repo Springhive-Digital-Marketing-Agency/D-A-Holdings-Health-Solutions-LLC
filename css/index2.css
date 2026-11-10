@@ -2848,7 +2848,7 @@ h1, h2, h3, h4, h5, h6 {
         flex-shrink: 0 !important;
     }
     .site-header .brand-logo img {
-        height: 125px !important;
+        height: 90px !important;
         width: auto !important;
         max-width: none !important;
         object-fit: contain !important;
@@ -2915,7 +2915,7 @@ h1, h2, h3, h4, h5, h6 {
         flex-shrink: 0 !important;
     }
     .site-header .brand-logo img {
-        height: 125px !important;
+        height: 95px !important;
         width: auto !important;
         max-width: none !important;
         object-fit: contain !important;
