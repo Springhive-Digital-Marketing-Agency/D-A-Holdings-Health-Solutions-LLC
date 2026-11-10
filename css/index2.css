@@ -393,13 +393,64 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
-/* Header Alignment: follow arrows to bring Logo and Book Appointment button closer to navigation */
-@media screen and (min-width: 1024px) {
+/* Desktop Header: clean space-between layout with controlled max-width and centered nav */
+@media screen and (min-width: 1025px) {
     .site-header .container,
     .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        max-width: 1440px !important;
+        width: 100% !important;
+        gap: 1.5rem !important;
+    }
+    .site-header .brand-logo {
+        flex-shrink: 0 !important;
+        margin-right: 0 !important;
+    }
+    .desktop-nav {
+        display: flex !important;
+        align-items: center !important;
         justify-content: center !important;
-        gap: clamp(1.25rem, 2.2vw, 2.5rem) !important;
-        flex-wrap: nowrap !important;
+        flex: 1 1 auto !important;
+        gap: clamp(1rem, 1.5vw, 2rem) !important;
+    }
+    .header-actions {
+        flex-shrink: 0 !important;
+        margin-left: 0 !important;
+    }
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Tablet & Mobile Header (Max 1024px): Logo on Left, Actions (Hamburger & Button) on Right */
+@media screen and (max-width: 1024px) {
+    .site-header .container,
+    .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .site-header .brand-logo {
+        margin-right: auto !important;
+        flex-shrink: 0 !important;
+    }
+    .header-actions {
+        margin-left: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        flex-shrink: 0 !important;
+    }
+    .menu-toggle {
+        display: flex !important;
+        order: -1 !important;
+    }
+    .desktop-nav {
+        display: none !important;
     }
 }
 
