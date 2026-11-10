@@ -135,6 +135,16 @@
             display: block !important;
         }
 
+        /* Header Alignment: follow arrows to bring Logo and Book Appointment button closer to navigation */
+        @media screen and (min-width: 1024px) {
+            .site-header .container,
+            .header-container {
+                justify-content: center !important;
+                gap: clamp(1.25rem, 2.2vw, 2.5rem) !important;
+                flex-wrap: nowrap !important;
+            }
+        }
+
         /* ==========================================================================
            RESPONSIVE VIEWPORT ADJUSTMENTS (Laptop Reference: Image 2)
            ========================================================================== */
@@ -398,7 +408,7 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
-                <a href="book-appointment.html" class="btn btn-consultation">Book An Appointment</a>
+                <a href="book-appointment.html" class="btn btn-consultation">Book Appointment</a>
             </div>
         </div>
     </header>

@@ -393,6 +393,16 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
+/* Header Alignment: follow arrows to bring Logo and Book Appointment button closer to navigation */
+@media screen and (min-width: 1024px) {
+    .site-header .container,
+    .header-container {
+        justify-content: center !important;
+        gap: clamp(1.25rem, 2.2vw, 2.5rem) !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
 .site-header .nav-link {
     white-space: nowrap;
 }
