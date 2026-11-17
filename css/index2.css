@@ -1243,6 +1243,47 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0.8rem;
 }
 
+.service-sub-items {
+    margin: -0.6rem 0 1.5rem 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--clr-border, #E5E7EB);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--clr-charcoal, #2C3E50);
+}
+
+.service-sub-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.service-sub-item:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.service-sub-bullet {
+    color: var(--clr-gold, #C4A46A);
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+@media (min-width: 1025px) {
+    .services-grid > .service-block:nth-child(7):last-child {
+        grid-column: 2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .services-grid > .service-block:nth-child(7):last-child {
+        grid-column: 1 / -1;
+        max-width: 480px;
+        margin-inline: auto;
+        width: 100%;
+    }
+}
+
 /* ==========================================================================
    FEATURED CARE SECTION (PERSON-CENTERED CARE)
    ========================================================================== */
